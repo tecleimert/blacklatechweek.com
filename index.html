@@ -15,6 +15,20 @@
 <link rel="icon" href="assets/icon.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/icon.png">
 <title>Black L.A. Tech Week — October 12–18, 2026</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KQH57G9EXF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  /* The site is a three-tab router in one document, so the router sends every
+     page_view itself. Safety net: if it hasn't fired within 2s, send one. */
+  gtag('config', 'G-KQH57G9EXF', { send_page_view: false });
+  window.__blatwPV = false;
+  setTimeout(function(){
+    if(!window.__blatwPV){ window.__blatwPV = true; gtag('event','page_view'); }
+  }, 2000);
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=DM+Mono:wght@300;400;500&display=swap">
@@ -1652,6 +1666,10 @@ checkinForm.addEventListener("submit", function(e){
   var o=document.getElementById("ci-org").value.trim();
   var w=document.getElementById("ci-work").value.trim();
   if(!n || !o) return;
+  /* GA4: the guest book is the one conversion on the site */
+  if(typeof gtag === "function"){
+    try{ gtag('event','generate_lead',{ method:'guest_book' }); }catch(err){}
+  }
   var li = addGuest(n,o,w);
   ["ci-name","ci-org","ci-work","ci-email"].forEach(function(id){ document.getElementById(id).value=""; });
   li.scrollIntoView({block:"center"});
@@ -2185,6 +2203,19 @@ if(navAsk) navAsk.addEventListener("click", function(){ openBlair(); });
       if(a.getAttribute("data-nav") === target) a.setAttribute("aria-current","page");
       else a.removeAttribute("aria-current");
     });
+    /* GA4: each tab is its own virtual page so The Week / About / Ask BLAIR
+       show up separately in reports instead of collapsing into "/" */
+    if(typeof gtag === "function"){
+      var path = target === "home" ? "/" : "/" + target;
+      var titles = { home:"The Week", about:"About", blair:"Ask BLAIR" };
+      try{
+        window.__blatwPV = true;
+        gtag('event','page_view',{
+          page_title: titles[target] + " — Black L.A. Tech Week",
+          page_location: location.origin + path
+        });
+      }catch(e){}
+    }
     if(hash){
       var el = document.querySelector(hash);
       if(el && el.scrollIntoView){ el.scrollIntoView({behavior:"smooth", block:"start"}); return; }
