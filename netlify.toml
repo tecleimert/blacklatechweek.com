@@ -1,0 +1,61 @@
+# BLATW · BLAIR — presentation prototype
+
+[build]
+  publish = "."
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# /dropin/ mirrors the old site for internal review — never index that.
+[[headers]]
+  for = "/dropin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/voice/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/voice-map.json"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# The old site had seven indexed URLs. When the domain moves here they would
+# all 404, so they land on the closest thing this site has instead.
+[[redirects]]
+  from = "/events"
+  to = "/#week"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/events/*"
+  to = "/#week"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/"
+  status = 301
+  force = true

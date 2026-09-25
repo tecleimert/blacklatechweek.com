@@ -1,0 +1,2373 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="Black L.A. Tech Week — an annual convening of thought leaders, founders, professionals and entrepreneurs across technology and the creative economy, held alongside LA Tech Week. October 12–18, 2026 in Los Angeles.">
+<meta property="og:title" content="Black L.A. Tech Week — Oct 12–18, 2026">
+<meta property="og:description" content="Sixteen events across one week in Los Angeles. Meet the twelve orgs, browse the week, and RSVP.">
+<meta property="og:image" content="https://www.blacklatechweek.com/assets/og.jpg">
+<meta property="og:url" content="https://www.blacklatechweek.com/">
+<meta property="og:site_name" content="Black L.A. Tech Week">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/icon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<title>Black L.A. Tech Week — October 12–18, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Michroma&family=DM+Mono:wght@300;400;500&display=swap">
+
+<style>
+/* ============================================================
+   BLATW — brand sampled from the live site:
+   pure-black ground, mono body, wide techno display,
+   electric blue -> violet -> magenta neon from the hero art.
+   Single committed dark identity (the brand is black), every
+   colour painted explicitly so it holds on any host ground.
+   ============================================================ */
+:root{
+  --void:#000000;
+  --panel:#08080B;
+  --panel-2:#101015;
+  --panel-3:#17171E;
+  --line:#242430;
+  --line-hot:#3A3A4C;
+  --white:#FFFFFF;
+  --dim:#9C9CA8;
+  --dim-2:#6E6E7C;
+
+  --blue:#2FA7E8;
+  --violet:#9B4DFF;
+  --lilac:#D6B8F5;
+  --magenta:#FF3FC1;
+
+  --f-display:"Michroma","Arial Narrow",Impact,sans-serif;
+  --f-mono:"DM Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+  --pad:clamp(1.1rem,4vw,3.5rem);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--void);color:var(--white);
+  font-family:var(--f-mono);font-weight:300;font-size:15px;line-height:1.78;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+p{margin:0}
+a{color:inherit}
+button{font:inherit;color:inherit}
+h1,h2,h3{margin:0;font-family:var(--f-display);font-weight:400;line-height:1.14;letter-spacing:.01em;text-wrap:balance}
+:where(a,button,input,summary,[tabindex]):focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+
+.wrap{max-width:1240px;margin:0 auto;padding-inline:var(--pad)}
+.sec{padding-block:clamp(3.2rem,7vw,6rem);border-top:1px solid var(--line)}
+.eyebrow{
+  font-size:.68rem;letter-spacing:.34em;text-transform:uppercase;color:var(--violet);
+  margin:0 0 1.1rem;display:flex;align-items:center;gap:.8rem;font-weight:400;
+}
+.eyebrow::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,var(--violet),transparent)}
+h2.big{font-size:clamp(1.25rem,2.9vw,2.15rem);text-transform:uppercase;letter-spacing:.005em}
+.lede{color:var(--dim);max-width:60ch;margin-top:1.1rem;font-size:.95rem}
+/* BLAIR's name in running copy — a real control, styled as a word */
+.inline-blair{
+  background:none;border:0;padding:0;cursor:pointer;font:inherit;
+  color:var(--lilac);border-bottom:1px solid rgba(214,184,245,.45);
+  transition:color .16s,border-color .16s;
+}
+.inline-blair:hover{color:var(--magenta);border-bottom-color:var(--magenta)}
+.inline-blair:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+
+/* ---------- note bar ---------- */
+.note{background:var(--panel-2);border-bottom:1px solid var(--line);font-size:.66rem;letter-spacing:.11em;color:var(--dim-2)}
+.note .wrap{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;align-items:center;padding-block:.62rem}
+.note b{color:var(--magenta);font-weight:400;text-transform:uppercase;letter-spacing:.2em}
+@media(max-width:760px){.note .n2{display:none}}
+
+/* ---------- top bar ---------- */
+.top{position:relative;z-index:5;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding-block:1.15rem}
+.lock{display:flex;align-items:center;line-height:1;text-decoration:none}
+.lock-mark{display:block;height:clamp(30px,4.4vw,42px);width:auto}
+.lock .bl{font-family:var(--f-display);font-size:1.32rem;letter-spacing:.02em;display:flex;align-items:center}
+.lock .st{color:var(--violet);transform:translateY(-.02em);margin:0 .01em}
+.lock .sub{font-size:.53rem;letter-spacing:.42em;color:var(--dim);margin-top:.42rem}
+nav.main{display:flex;gap:1.5rem;font-size:.7rem;letter-spacing:.2em;text-transform:uppercase}
+nav.main a{text-decoration:none;color:var(--dim);padding-bottom:2px;border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+nav.main a:hover{color:var(--white);border-bottom-color:var(--violet)}
+.nav-ask{
+  font-family:var(--f-mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;
+  padding:.44rem 1rem;border:1px solid var(--violet);border-radius:999px;background:rgba(155,77,255,.14);
+  color:var(--lilac);cursor:pointer;transition:background .18s,color .18s;
+}
+.nav-ask:hover{background:var(--violet);color:#fff}
+/* it is a tab now, not a button — keep the pill, drop the link underline */
+nav.main a.nav-ask{text-decoration:none;display:inline-block;line-height:1.2;border-bottom:1px solid var(--violet)}
+nav.main a.nav-ask:hover{border-bottom-color:var(--violet)}
+nav.main a.nav-ask[aria-current="page"]{background:var(--violet);color:#fff}
+/* The nav was hidden on phones back when this was a single page. With
+   three tabs it is the only way to reach About and BLAIR, so it wraps
+   under the lockup instead of disappearing. */
+@media(max-width:880px){
+  .top{flex-wrap:wrap;justify-content:center;gap:.9rem 0;padding-block:1rem .9rem}
+  nav.main{width:100%;justify-content:center;flex-wrap:wrap;gap:.9rem;font-size:.62rem;letter-spacing:.16em}
+  .nav-ask{padding:.38rem .8rem}
+}
+@media(max-width:380px){ nav.main{gap:.7rem;font-size:.58rem} }
+
+/* ---------- HERO ---------- */
+/* The key art is a 2.81:1 composition with a face at each edge — cropping it
+   cuts both faces off, so it is NEVER cropped. Desktop overlays the lockup on
+   the textured centre; below 880px the art keeps its full width and the
+   lockup stacks beneath it. */
+.hero{position:relative;background:var(--void);border-block:1px solid var(--line)}
+/* The still is never cropped (contain); the motion cut is a 2.35:1 centre
+   crop of the same art, which frames both faces. Same box, both work. */
+.hero-art{position:relative;width:100%;line-height:0;max-height:78vh;overflow:hidden;display:flex;justify-content:center;align-items:center}
+.hero-vid{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 46%;
+  opacity:0;transition:opacity 1.4s ease;pointer-events:none;
+}
+.hero-vid.on{opacity:1}
+@media(min-width:1080px){ .hero-art{aspect-ratio:2.35/1} }
+@media(prefers-reduced-motion:reduce){ .hero-vid{display:none} }
+.hero-img{width:100%;height:auto;max-height:78vh;object-fit:contain;display:block}
+.hero-art::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    radial-gradient(ellipse 52% 62% at 50% 50%, rgba(0,0,0,.66) 0%, rgba(0,0,0,.34) 55%, rgba(0,0,0,0) 84%),
+    repeating-linear-gradient(0deg, rgba(0,0,0,.13) 0 1px, transparent 1px 3px);
+}
+.hero-in{position:relative;z-index:2;text-align:center;padding:clamp(1.8rem,5vw,3rem) var(--pad)}
+/* Overlay only once the art is tall enough to hold the lockup without
+   letterboxing (art height = width / 2.815). Below this it stacks. */
+@media(min-width:1080px){
+  .hero{display:grid}
+  .hero-art{grid-area:1/1}
+  .hero-in{grid-area:1/1;align-self:center;justify-self:center;width:100%;padding-block:1rem}
+}
+.dates{font-family:var(--f-display);font-size:clamp(.9rem,2.1vw,1.55rem);letter-spacing:.24em;color:var(--white);text-shadow:0 2px 18px rgba(0,0,0,.85),0 0 26px rgba(155,77,255,.6)}
+.mega{margin:clamp(.8rem,2vw,1.5rem) 0 0;display:flex;justify-content:center}
+.mega-mark{
+  width:min(560px,72vw);height:auto;display:block;
+  filter:drop-shadow(0 2px 24px rgba(0,0,0,.85)) drop-shadow(0 0 40px rgba(47,167,232,.45)) drop-shadow(0 0 80px rgba(155,77,255,.35));
+}
+.mega-sub{font-family:var(--f-display);font-size:clamp(.58rem,1.8vw,1.05rem);letter-spacing:.3em;color:var(--white);text-shadow:0 2px 16px rgba(0,0,0,.85)}
+/* ---------- social rail ---------- */
+.rail{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:40;display:flex;flex-direction:column;background:var(--panel);border:1px solid var(--line);border-right:0}
+.rail a{display:grid;place-items:center;width:38px;height:38px;color:var(--dim);text-decoration:none;font-size:.6rem;letter-spacing:.06em;transition:color .18s,background .18s}
+.rail a:hover{color:var(--white);background:var(--panel-3)}
+@media(max-width:900px){.rail{display:none}}
+
+/* ---------- THE CAPTAIN ---------- */
+.desk-sec{padding-block:clamp(3rem,6vw,5rem)}
+.desk-grid{display:grid;gap:clamp(1.8rem,4vw,3.2rem);grid-template-columns:1fr}
+@media(min-width:1000px){.desk-grid{grid-template-columns:.86fr 1.14fr;align-items:start}}
+.desk{
+  background:var(--panel);border:1px solid var(--line-hot);position:relative;
+  display:flex;flex-direction:column;min-height:min(560px,80vh);
+}
+.desk::before{content:"";position:absolute;inset:0 0 auto;height:2px;background:linear-gradient(90deg,var(--blue),var(--violet) 52%,var(--magenta))}
+.desk-head{display:flex;align-items:center;gap:.85rem;padding:1.15rem 1.2rem;border-bottom:1px solid var(--line)}
+.bell{
+  width:42px;height:42px;flex:none;border:1px solid var(--violet);background:rgba(155,77,255,.11);
+  color:var(--lilac);cursor:pointer;display:grid;place-items:center;font-size:1.15rem;line-height:1;
+  transition:transform .18s cubic-bezier(.3,1.6,.5,1),box-shadow .3s,background .2s;
+}
+.bell:hover{box-shadow:0 0 0 5px rgba(155,77,255,.16);background:rgba(155,77,255,.2)}
+.bell:active{transform:scale(.9)}
+.bell.ring{animation:ring .55s ease}
+@keyframes ring{0%,100%{transform:rotate(0)}20%{transform:rotate(-13deg)}45%{transform:rotate(11deg)}70%{transform:rotate(-6deg)}}
+.desk-title{font-family:var(--f-display);font-size:.86rem;letter-spacing:.14em;text-transform:uppercase}
+.desk-sub{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim-2);margin-top:.3rem}
+.dot{width:6px;height:6px;border-radius:50%;background:var(--blue);display:inline-block;margin-right:.45rem;vertical-align:middle;box-shadow:0 0 8px var(--blue)}
+
+.log{flex:1;overflow-y:auto;padding:1.2rem;display:flex;flex-direction:column;gap:1rem;max-height:min(52vh,440px);scroll-behavior:smooth}
+.msg{max-width:93%;font-size:.87rem;line-height:1.72}
+.msg.cap{align-self:flex-start}
+.msg.you{align-self:flex-end;text-align:right}
+.msg .who{font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;color:var(--dim-2);margin-bottom:.4rem;display:block}
+.bub{display:inline-block;text-align:left;padding:.78rem .95rem;background:var(--panel-2);border:1px solid var(--line);border-left:2px solid var(--violet)}
+.msg.you .bub{background:var(--panel-3);border-left:1px solid var(--line);border-right:2px solid var(--blue)}
+.bub b{font-weight:500;color:var(--white)}
+.bub p+p{margin-top:.62rem}
+.bub a{color:var(--lilac);text-underline-offset:3px}
+.bub a:hover{color:var(--magenta)}
+.bub ul{margin:.6rem 0 0;padding-left:1rem;list-style:none}
+.bub li{margin-bottom:.36rem;position:relative}
+.bub li::before{content:"▸";position:absolute;left:-1rem;color:var(--violet)}
+.bub .k{color:var(--dim-2);font-size:.8rem}
+.msg.in{animation:rise .32s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:none}}
+.typing span{display:inline-block;width:5px;height:5px;background:var(--violet);margin-right:4px;animation:blip 1s infinite}
+.typing span:nth-child(2){animation-delay:.16s}.typing span:nth-child(3){animation-delay:.32s}
+@keyframes blip{0%,60%,100%{opacity:.22}30%{opacity:1}}
+
+.chips{display:grid;grid-template-columns:1fr 1fr;gap:.4rem;padding:0 1.2rem .9rem}
+@media(max-width:420px){.chips{grid-template-columns:1fr}}
+.chip{
+  font-size:.64rem;letter-spacing:.08em;padding:.5rem .7rem;cursor:pointer;text-align:left;
+  border:1px solid var(--line-hot);background:transparent;color:var(--dim);
+  transition:border-color .16s,color .16s,background .16s;
+}
+.chip:hover{border-color:var(--violet);color:var(--white);background:rgba(155,77,255,.12)}
+
+.ask{display:flex;gap:.5rem;padding:.85rem 1.2rem 1.15rem;border-top:1px solid var(--line)}
+.ask input{flex:1;font-family:var(--f-mono);font-size:.85rem;padding:.66rem .8rem;background:var(--void);border:1px solid var(--line-hot);color:var(--white)}
+.ask input::placeholder{color:var(--dim-2)}
+.ask button{padding:.66rem 1.15rem;background:var(--violet);border:1px solid var(--violet);color:var(--white);cursor:pointer;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;transition:filter .16s}
+.ask button:hover{filter:brightness(1.18)}
+
+.desk-why h2{margin-bottom:1.1rem}
+.why-list{list-style:none;margin:1.6rem 0 0;padding:0;display:flex;flex-direction:column;gap:1.15rem}
+.why-list li{padding-left:1.6rem;position:relative;color:var(--dim);font-size:.88rem}
+.why-list li::before{content:"";position:absolute;left:0;top:.62em;width:.65rem;height:1px;background:var(--violet)}
+.why-list b{color:var(--white);font-weight:500}
+
+/* ---------- PROGRAM ---------- */
+.days{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.3rem}
+@media(min-width:840px){.days{grid-template-columns:repeat(4,1fr)}}
+/* fourteen submissions rather than four nights — let the grid choose its
+   own column count so the last row never strands a single tile */
+.days-14{grid-template-columns:repeat(auto-fill,minmax(232px,1fr))}
+@media(min-width:840px){.days-14{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}}
+a.day{text-decoration:none;color:inherit}
+a.day:hover{background:var(--panel-2)}
+a.day:focus-visible{outline:2px solid var(--violet);outline-offset:-2px}
+.day .rsvp{margin-top:auto;padding-top:1rem;font-size:.62rem;letter-spacing:.2em;
+  text-transform:uppercase;color:var(--violet);transition:color .18s}
+a.day:hover .rsvp{color:var(--lilac)}
+.day h3{overflow-wrap:anywhere}
+.day{background:var(--panel);padding:1.6rem 1.3rem 1.8rem;display:flex;flex-direction:column;gap:.6rem;transition:background .2s}
+.day:hover{background:var(--panel-2)}
+.day .n{font-size:.62rem;letter-spacing:.24em;color:var(--blue)}
+.day h3{font-size:.92rem;text-transform:uppercase;letter-spacing:.06em;line-height:1.35}
+.day .when{font-size:.75rem;color:var(--dim);font-variant-numeric:tabular-nums;letter-spacing:.06em}
+.day .note-t{font-size:.82rem;color:var(--dim-2);margin-top:auto;padding-top:.9rem}
+
+/* ---------- DIRECTORY ---------- */
+.board{margin-top:2.3rem;border-top:1px solid var(--line-hot)}
+.row{
+  display:grid;grid-template-columns:1fr;gap:.18rem .9rem;padding:1rem 0;
+  border-bottom:1px solid var(--line);align-items:baseline;text-decoration:none;
+  transition:padding-left .2s ease,background .2s;
+}
+@media(min-width:780px){.row{grid-template-columns:minmax(0,16rem) 1fr auto}}
+.row:hover{padding-left:.7rem;background:linear-gradient(90deg,rgba(155,77,255,.14),transparent 65%)}
+.row .nm{font-size:.86rem;letter-spacing:.09em;text-transform:uppercase;color:var(--white)}
+.row .ds{color:var(--dim);font-size:.85rem}
+.row .go{font-size:.62rem;letter-spacing:.2em;color:var(--violet);white-space:nowrap}
+
+/* ---------- MODULES ---------- */
+.mods{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin-top:2.3rem}
+@media(min-width:780px){.mods{grid-template-columns:repeat(3,1fr)}}
+.mod{background:var(--panel);padding:1.7rem 1.4rem;display:flex;flex-direction:column;gap:.75rem;min-height:210px}
+.mod h3{font-size:.9rem;text-transform:uppercase;letter-spacing:.09em}
+.mod p{font-size:.85rem;color:var(--dim)}
+.slot{margin-top:auto;font-size:.66rem;letter-spacing:.09em;color:var(--dim-2);border:1px dashed var(--line-hot);padding:.6rem .7rem}
+.slot a{color:var(--lilac);text-decoration:none}
+.slot a:hover{color:var(--magenta)}
+
+/* ---------- GUEST BOOK ---------- */
+.gb{display:grid;gap:clamp(1.8rem,3.5vw,3rem);grid-template-columns:1fr;margin-top:2.3rem}
+@media(min-width:920px){.gb{grid-template-columns:minmax(0,23rem) 1fr;align-items:stretch}}
+/* the photo beside the book — matches the form's height on wide screens,
+   sits under it as a band on narrow ones */
+.gb-art{margin:0;position:relative;overflow:hidden;border:1px solid var(--line);background:var(--panel-2)}
+/* below the two-column breakpoint the photo has no form to match, so it
+   sets its own band height instead of collapsing to nothing */
+@media(max-width:919px){.gb-art{min-height:clamp(220px,42vw,320px)}}
+/* absolutely filled so the photo matches the form's height exactly rather
+   than setting its own from the image's aspect ratio */
+.gb-art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%;display:block;filter:saturate(.98) contrast(1.02)}
+.gb-art::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,0) 42%,rgba(0,0,0,.34))}
+.wall{margin-top:clamp(1.8rem,3.5vw,3rem)}
+.wall-empty{margin-top:clamp(1.8rem,3.5vw,3rem)}
+.form{background:var(--panel);border:1px solid var(--line-hot);padding:1.5rem;display:flex;flex-direction:column;gap:.9rem}
+.field{display:flex;flex-direction:column;gap:.35rem}
+.field label{font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--dim-2)}
+.field input{font-family:var(--f-mono);font-size:.85rem;padding:.6rem .7rem;background:var(--void);border:1px solid var(--line-hot);color:var(--white)}
+.field input::placeholder{color:var(--dim-2)}
+.form button{margin-top:.4rem;padding:.8rem 1rem;background:var(--white);color:var(--void);border:1px solid var(--white);cursor:pointer;font-size:.7rem;letter-spacing:.24em;text-transform:uppercase;transition:background .18s,color .18s}
+.form button:hover{background:var(--violet);border-color:var(--violet);color:var(--white)}
+.fine{font-size:.62rem;line-height:1.75;color:var(--dim-2)}
+
+.wall{list-style:none;margin:0;padding:0;display:grid;gap:1px;background:var(--line);border:1px solid var(--line)}
+@media(min-width:640px){.wall{grid-template-columns:repeat(2,1fr)}}
+.wall:empty{display:none}
+.wall li{background:var(--panel);padding:1.05rem 1.15rem;border-left:2px solid var(--violet)}
+.wall .gn{font-size:.84rem;letter-spacing:.09em;text-transform:uppercase;color:var(--white)}
+.wall .go2{font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;color:var(--blue);margin-top:.28rem}
+.wall .gw{font-size:.84rem;color:var(--dim);margin-top:.5rem}
+.wall-empty{border:1px dashed var(--line-hot);padding:1.8rem;text-align:center;color:var(--dim-2);font-size:.68rem;letter-spacing:.12em}
+
+/* ---------- PEOPLE ---------- */
+.people{display:flex;flex-wrap:wrap;gap:.45rem;margin-top:2rem}
+.pill{display:inline-flex;align-items:baseline;gap:.6rem;text-decoration:none;border:1px solid var(--line-hot);padding:.46rem .85rem;transition:border-color .16s,background .16s}
+.pill:hover{border-color:var(--violet);background:rgba(155,77,255,.12)}
+.pill b{font-weight:400;font-size:.78rem;letter-spacing:.06em;color:var(--white)}
+.pill span{font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim-2)}
+
+/* ---------- RECAP BAND ---------- */
+.band{position:relative;overflow:hidden;border-block:1px solid var(--line);background:var(--void)}
+.band img{width:100%;height:clamp(240px,34vw,460px);object-fit:cover;object-position:center 52%;display:block;filter:saturate(.96) contrast(1.03)}
+.band::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.34) 0%,rgba(0,0,0,0) 34%,rgba(0,0,0,0) 58%,rgba(0,0,0,.72) 100%)}
+.band-cap{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;padding:1.4rem var(--pad);
+  font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);
+}
+.band-cap b{color:var(--white);font-weight:400}
+
+/* ---------- ROSTER (matches the live site's organizations grid) ---------- */
+.roster{display:grid;gap:clamp(1.4rem,3vw,2.4rem);grid-template-columns:1fr;margin-top:2.4rem}
+@media(min-width:820px){.roster{grid-template-columns:repeat(2,1fr)}}
+.member{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(1rem,2vw,1.6rem);align-items:center}
+.member-photo{position:relative;aspect-ratio:1;overflow:hidden;background:var(--panel-2)}
+.member-photo img{width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block;transition:transform .6s ease}
+.member:hover .member-photo img{transform:scale(1.04)}
+.member-role{font-size:.62rem;letter-spacing:.2em;text-transform:capitalize;color:var(--dim-2);display:block}
+.member-name{
+  font-family:var(--f-display);font-size:clamp(.92rem,1.7vw,1.22rem);letter-spacing:.055em;
+  text-transform:uppercase;line-height:1.3;margin:.5rem 0 1rem;color:var(--white);
+}
+.member-cta{
+  display:inline-block;text-decoration:none;font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--white);border:1px solid var(--line-hot);padding:.5rem .95rem;
+  transition:border-color .18s,background .18s,color .18s;
+}
+.member-cta:hover{border-color:var(--violet);background:rgba(155,77,255,.16);color:var(--lilac)}
+.member.pending .member-photo{display:grid;place-items:center;border:1px dashed var(--line-hot)}
+.member.pending .member-photo::after{content:attr(data-note);font-size:.58rem;letter-spacing:.12em;color:var(--dim-2);text-align:center;padding:1rem;line-height:1.8}
+
+/* ---------- PORTRAIT WALL (legacy, unused) ---------- */
+.portraits{
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:0;
+  background:transparent;border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:2rem;
+}
+.portraits figure{
+  margin:0;position:relative;background:var(--panel);aspect-ratio:1;overflow:hidden;
+  border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.portraits img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(.32) contrast(1.05);transition:filter .35s ease,transform .5s ease}
+.portraits figure:hover img{filter:grayscale(0) contrast(1);transform:scale(1.05)}
+.portraits figure::after{
+  content:attr(data-n);position:absolute;top:.4rem;right:.5rem;
+  font-size:.55rem;letter-spacing:.1em;color:var(--white);opacity:.5;
+  text-shadow:0 1px 3px rgba(0,0,0,.9);
+}
+.unmapped{
+  margin-top:1.5rem;border:1px dashed var(--magenta);padding:.9rem 1rem;
+  font-size:.66rem;letter-spacing:.09em;line-height:1.9;color:var(--dim);
+}
+.unmapped b{color:var(--magenta);font-weight:400;text-transform:uppercase;letter-spacing:.2em}
+
+/* ---------- CAPTAIN CARD (Innerface pattern, BLATW skin) ---------- */
+.cap-card{
+  margin-top:2.4rem;display:grid;gap:clamp(1.6rem,3.5vw,3rem);grid-template-columns:1fr;
+  align-items:center;padding:clamp(1.6rem,3.5vw,2.8rem);
+  border:1px solid var(--line-hot);border-radius:20px;
+  background:
+    radial-gradient(120% 140% at 88% 50%, rgba(155,77,255,.18), transparent 62%),
+    radial-gradient(90% 120% at 8% 20%, rgba(47,167,232,.12), transparent 60%),
+    var(--panel);
+  box-shadow:0 0 0 1px rgba(155,77,255,.08), 0 30px 80px -40px rgba(155,77,255,.5);
+}
+@media(min-width:860px){.cap-card{grid-template-columns:1.25fr .75fr}}
+.badge{
+  display:inline-block;font-size:.58rem;letter-spacing:.24em;text-transform:uppercase;
+  color:var(--lilac);border:1px solid rgba(155,77,255,.5);background:rgba(155,77,255,.1);
+  border-radius:999px;padding:.34rem .8rem;
+}
+.kicker{margin-top:1.1rem;font-size:.76rem;letter-spacing:.14em;color:var(--dim)}
+.kicker b{font-weight:400;color:var(--blue);text-shadow:0 0 14px rgba(47,167,232,.6)}
+.cap-name{font-family:var(--f-display);font-size:clamp(2.1rem,5.5vw,3.4rem);letter-spacing:.06em;margin:.3rem 0 .5rem;text-shadow:0 0 40px rgba(155,77,255,.45)}
+.cap-meta{font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim-2)}
+.cap-desc{margin-top:1.2rem;color:var(--dim);font-size:.9rem;max-width:52ch}
+.cap-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.7rem}
+.btn-primary,.btn-ghost{
+  font-family:var(--f-mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;
+  padding:.72rem 1.4rem;border-radius:8px;cursor:pointer;text-decoration:none;display:inline-block;
+  transition:filter .16s,background .16s,border-color .16s,color .16s;
+}
+.btn-primary{background:var(--violet);border:1px solid var(--violet);color:#fff}
+.btn-primary:hover{filter:brightness(1.2)}
+.btn-ghost{background:transparent;border:1px solid var(--line-hot);color:var(--dim)}
+.btn-ghost:hover{border-color:var(--violet);color:var(--white);background:rgba(155,77,255,.1)}
+
+.orb-wrap{display:grid;place-items:center;padding:.5rem}
+
+/* BLAIR's orb — a spinning ring with a corona that breathes, and reacts
+   to her actual voice. Palette is BLATW's own: blue → violet → magenta. */
+.orb{
+  --level:0;
+  position:relative;width:var(--orb-size,min(230px,58vw));aspect-ratio:1;border-radius:50%;
+  display:grid;place-items:center;isolation:isolate;
+  border:0;padding:0;background:transparent;color:inherit;font:inherit;
+  cursor:pointer;-webkit-appearance:none;appearance:none;
+  transition:transform .22s cubic-bezier(.3,1.4,.5,1), box-shadow .12s linear;
+  box-shadow:
+    0 0 calc(80px + var(--level) * 80px) calc(-18px + var(--level) * 20px) rgba(155,77,255,.68),
+    0 0 calc(160px + var(--level) * 120px) calc(-40px + var(--level) * 26px) rgba(47,167,232,.36);
+  transition:box-shadow .12s linear;
+}
+.orb::before{
+  content:"";position:absolute;inset:0;border-radius:50%;z-index:0;
+  background:conic-gradient(from 0deg,
+    rgba(47,167,232,.25), var(--blue), var(--violet) 38%, var(--magenta) 58%,
+    var(--violet) 74%, var(--blue) 92%, rgba(47,167,232,.25));
+  animation:orbspin 9s linear infinite;
+}
+.orb::after{
+  content:"";position:absolute;inset:calc(var(--orb-size,230px) * 0.045);border-radius:50%;z-index:1;
+  background:radial-gradient(circle at 50% 45%, #0A0A0F 58%, rgba(10,10,15,.9) 100%);
+  transform:scale(calc(1 - var(--level) * 0.035));
+  transition:transform .1s linear;
+}
+.orb span{
+  position:relative;z-index:2;font-family:var(--f-display);
+  font-size:clamp(1.15rem,3.4vw,2.1rem);letter-spacing:.24em;color:var(--white);
+  text-shadow:0 0 calc(18px + var(--level) * 26px) rgba(214,184,245,.95);
+}
+@keyframes orbspin{to{transform:rotate(360deg)}}
+@keyframes corona{
+  0%,100%{opacity:.5;transform:scale(1)}
+  50%    {opacity:.95;transform:scale(1.06)}
+}
+/* the ember — a soft corona ring outside the orb, BLATW's colours */
+.orb-wrap{position:relative}
+.intro-orb{padding-block:clamp(2.6rem,6vw,5.5rem);--orb-size:clamp(200px,26vw,360px);overflow-x:clip}
+.orb-split{display:grid;gap:clamp(2rem,5vw,4rem);grid-template-columns:1fr;align-items:center}
+@media(min-width:960px){.orb-split{grid-template-columns:1fr 1fr}}
+
+/* ---- left: the orb and who she is ---- */
+.orb-side{display:flex;flex-direction:column;align-items:center;text-align:center;gap:.5rem}
+.orb-wrap{position:relative;display:grid;place-items:center;padding:clamp(1.4rem,3.5vw,2.4rem);max-width:100%}
+.ring{
+  position:absolute;width:var(--orb-size);aspect-ratio:1;border-radius:50%;
+  border:1px solid rgba(155,77,255,.55);pointer-events:none;opacity:0;
+  animation:ripple 3.6s cubic-bezier(.22,.7,.3,1) infinite;
+}
+.ring:nth-of-type(2){animation-delay:1.2s;border-color:rgba(47,167,232,.5)}
+.ring:nth-of-type(3){animation-delay:2.4s;border-color:rgba(255,63,193,.42)}
+@keyframes ripple{0%{transform:scale(1);opacity:.65}70%{opacity:.12}100%{transform:scale(1.62);opacity:0}}
+@media(max-width:560px){@keyframes ripple{0%{transform:scale(1);opacity:.65}70%{opacity:.12}100%{transform:scale(1.34);opacity:0}}}
+.orb-wrap:has(.orb.speaking) .ring{animation-duration:1.5s}
+
+.orb span{
+  position:relative;z-index:2;font-family:var(--f-display);
+  font-size:clamp(1.15rem,2.6vw,1.9rem);letter-spacing:.24em;color:var(--white);
+  text-shadow:0 0 calc(20px + var(--level) * 30px) rgba(214,184,245,.95);
+}
+.orb-sub{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim-2);margin:1.1rem 0 0}
+.orb-tap{
+  display:flex;align-items:center;gap:.5rem;margin:1.1rem 0 0;
+  font-size:.6rem;letter-spacing:.22em;text-transform:uppercase;color:var(--lilac);transition:color .2s;
+}
+.orb-tap span{color:var(--magenta);font-size:.68rem}
+.orb-side:hover .orb-tap{color:var(--white)}
+
+/* ---- right: the ask panel ---- */
+.ask-side{display:flex;flex-direction:column;gap:1rem;width:100%}
+.orb-log{
+  max-height:min(42vh,360px);overflow-y:auto;display:flex;flex-direction:column;gap:.85rem;scroll-behavior:smooth;
+}
+.orb-log:empty{display:none}
+.orb-log .msg{max-width:100%}
+.orb-log .msg:first-child .bub{
+  background:rgba(155,77,255,.09);border-color:rgba(155,77,255,.3);
+  border-left-width:1px;border-radius:12px;
+}
+.orb-log .msg:first-child .who{display:none}
+.orb-chips{display:flex;flex-wrap:wrap;gap:.45rem;padding:0}
+.orb-chips:empty{display:none}
+.orb-chips .chip{border-radius:8px;padding:.5rem .8rem;font-size:.66rem;letter-spacing:.04em;background:rgba(255,255,255,.03)}
+
+.orb-ask{
+  display:flex;align-items:center;gap:.6rem;width:100%;
+  background:rgba(8,8,11,.9);border:1px solid var(--line-hot);border-radius:999px;padding:.4rem .4rem .4rem .5rem;
+  transition:border-color .18s,box-shadow .18s;
+}
+.orb-ask:focus-within{border-color:var(--violet);box-shadow:0 0 0 4px rgba(155,77,255,.14)}
+.orb-ask input{flex:1;min-width:0;font-family:var(--f-mono);font-size:.84rem;padding:.5rem .2rem;background:transparent;border:0;color:var(--white)}
+.orb-ask input:focus{outline:none}
+.orb-ask input::placeholder{color:var(--dim-2)}
+.orb-mic,.orb-send{
+  width:38px;height:38px;flex:none;border-radius:50%;display:grid;place-items:center;padding:0;
+  cursor:pointer;line-height:1;transition:background .16s,border-color .16s,color .16s,transform .16s;
+}
+.orb-mic svg,.orb-send svg{width:17px;height:17px;display:block}
+.orb-send svg{width:16px;height:16px}
+.orb-mic{background:transparent;border:1px solid var(--line-hot);color:var(--dim)}
+.orb-mic:hover{border-color:var(--violet);color:var(--lilac)}
+.orb-mic.rec{border-color:var(--magenta);color:var(--magenta);animation:pulse 1.1s infinite}
+.orb-send{background:var(--violet);border:1px solid var(--violet);color:#fff}
+.orb-send:hover{filter:brightness(1.2);transform:scale(1.05)}
+.grounded{font-size:.56rem;letter-spacing:.18em;text-transform:uppercase;color:var(--dim-2);margin:0}
+
+/* ---------- voice toggle on BLAIR's page ---------- */
+.orb-speaker[aria-pressed="true"]{border-color:var(--violet);color:var(--lilac);background:rgba(155,77,255,.16)}
+.orb-speaker[aria-pressed="false"] .wave1,
+.orb-speaker[aria-pressed="false"] .wave2{opacity:.25}
+.orb-speaker[aria-pressed="true"] .wave1{animation:blair-wave 1.4s ease-in-out infinite}
+.orb-speaker[aria-pressed="true"] .wave2{animation:blair-wave 1.4s ease-in-out .2s infinite}
+@keyframes blair-wave{0%,100%{opacity:.35}50%{opacity:1}}
+
+/* ---------- SPOKEN-WORD HIGHLIGHT ---------- */
+/* Each word she says lights as she says it. Words already spoken stay
+   brightened, so the bubble reads as a filling progress bar of speech. */
+.bub .w{transition:color .12s linear,background-color .12s linear;border-radius:3px}
+.bub .w.said{color:var(--white)}
+.bub .w.on{
+  color:#fff;background:rgba(155,77,255,.34);
+  box-shadow:0 0 0 2px rgba(155,77,255,.34);
+}
+@media(prefers-reduced-motion:reduce){ .bub .w{transition:none} }
+
+/* ---------- DOCKED CAPTAIN ---------- */
+.dock{position:fixed;right:clamp(.9rem,2vw,1.6rem);bottom:clamp(.9rem,2vw,1.6rem);z-index:60;display:flex;flex-direction:column-reverse;align-items:flex-end;gap:.7rem}
+.launcher{display:flex;align-items:center;gap:.65rem;background:none;border:0;padding:0;cursor:pointer}
+.launch-pill{
+  font-size:.66rem;letter-spacing:.1em;color:var(--white);background:rgba(8,8,11,.94);
+  border:1px solid var(--line-hot);border-radius:999px;padding:.5rem .9rem;white-space:nowrap;
+  transition:border-color .18s;
+}
+.launcher:hover .launch-pill{border-color:var(--violet)}
+.launcher{position:relative}
+.launch-orb{
+  --level:0;
+  position:relative;width:56px;height:56px;border-radius:50%;display:grid;place-items:center;flex:none;
+  font-family:var(--f-display);font-size:.84rem;color:#fff;
+  box-shadow:
+    0 0 calc(24px + var(--level) * 30px) calc(-4px + var(--level) * 8px) rgba(155,77,255,.9),
+    0 0 calc(48px + var(--level) * 40px) calc(-16px + var(--level) * 12px) rgba(47,167,232,.45);
+  transition:transform .2s cubic-bezier(.3,1.5,.5,1), box-shadow .12s linear;
+}
+/* matching ripple rings, scaled to the launcher */
+.launch-orb .lring{
+  position:absolute;inset:0;border-radius:50%;border:1px solid rgba(155,77,255,.55);
+  pointer-events:none;opacity:0;animation:ripple 3.6s cubic-bezier(.22,.7,.3,1) infinite;
+}
+.launch-orb .lring:nth-of-type(2){animation-delay:1.2s;border-color:rgba(47,167,232,.5)}
+.launch-orb .lring:nth-of-type(3){animation-delay:2.4s;border-color:rgba(255,63,193,.42)}
+.launch-orb.speaking .lring{animation-duration:1.5s}
+.launch-orb::before{
+  content:"";position:absolute;inset:0;border-radius:50%;z-index:0;
+  background:conic-gradient(from 0deg,
+    rgba(47,167,232,.3), var(--blue), var(--violet) 38%, var(--magenta) 58%,
+    var(--violet) 74%, var(--blue) 92%, rgba(47,167,232,.3));
+  animation:orbspin 7s linear infinite;
+}
+.launcher:hover .launch-orb{transform:scale(1.08)}
+.launch-orb::after{
+  content:"";position:absolute;inset:4px;border-radius:50%;background:#08080B;z-index:1;
+  transform:scale(calc(1 - var(--level) * 0.06));transition:transform .1s linear;
+}
+.launch-orb b{position:relative;z-index:2;font-weight:400;text-shadow:0 0 calc(8px + var(--level) * 18px) rgba(214,184,245,.9)}
+.launch-orb.speaking{--level:var(--blair-level,0)}
+@media(prefers-reduced-motion:reduce){ .launch-orb::before{animation:none} }
+@media(max-width:560px){.launch-pill{display:none}}
+
+.panel{
+  width:min(390px,calc(100vw - 1.8rem));background:var(--panel);
+  border:1px solid var(--line-hot);border-radius:16px;overflow:hidden;
+  display:flex;flex-direction:column;box-shadow:0 40px 90px -30px rgba(0,0,0,.95), 0 0 0 1px rgba(155,77,255,.12);
+}
+.panel[hidden]{display:none}
+.dock[data-size="big"] .panel{width:min(560px,calc(100vw - 1.8rem))}
+.panel-head{display:flex;align-items:center;justify-content:space-between;gap:.7rem;padding:.85rem 1rem;border-bottom:1px solid var(--line);background:linear-gradient(90deg,rgba(47,167,232,.14),rgba(155,77,255,.14),rgba(255,63,193,.1))}
+.panel-name{font-family:var(--f-display);font-size:.95rem;letter-spacing:.16em;display:block}
+.panel-role{font-size:.55rem;letter-spacing:.14em;white-space:nowrap;text-transform:uppercase;color:var(--dim-2);margin-top:.24rem;display:block}
+.panel-ctl{display:flex;align-items:center;gap:.3rem}
+.pbtn{
+  background:transparent;border:1px solid transparent;color:var(--dim);cursor:pointer;
+  border-radius:6px;padding:.3rem .5rem;font-size:.6rem;letter-spacing:.12em;line-height:1;
+  display:inline-flex;align-items:center;gap:.3rem;white-space:nowrap;transition:color .16s,border-color .16s,background .16s;
+}
+.pbtn:hover{color:var(--white);background:rgba(255,255,255,.07)}
+.pbtn[aria-pressed="true"]{color:var(--lilac);border-color:var(--violet);background:rgba(155,77,255,.16)}
+.prov a{color:var(--lilac)}
+.prov{padding:0 1rem .5rem;font-size:.56rem;letter-spacing:.06em;color:var(--dim-2);line-height:1.6}
+.vsrc{color:var(--lilac)}
+.vsrc[data-kind="synth"]{color:var(--dim-2);font-style:italic}
+.vsrc[data-kind="live"]{color:var(--blue)}
+.dock .log{max-height:min(46vh,380px)}
+.dock[data-size="big"] .log{max-height:min(60vh,520px)}
+.ask .iconbtn{
+  width:34px;height:34px;flex:none;border-radius:50%;display:grid;place-items:center;padding:0;
+  background:transparent;border:1px solid var(--line-hot);color:var(--dim);cursor:pointer;
+  transition:color .16s,border-color .16s,background .16s;
+}
+.ask .iconbtn svg{width:15px;height:15px;display:block}
+.ask .iconbtn:hover{color:var(--white);border-color:var(--violet)}
+.ask .iconbtn.rec{color:var(--magenta);border-color:var(--magenta);animation:pulse 1.1s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+.ask .send{background:var(--violet);border-color:var(--violet);color:#fff}
+.ask .send:hover{filter:brightness(1.2)}
+@media(max-width:560px){
+  .dock{left:.7rem;right:.7rem;bottom:.7rem;align-items:stretch}
+  .launcher{justify-content:flex-end}
+  .panel{width:100%}
+  .dock[data-size="big"] .panel{width:100%}
+}
+
+/* ---------- WHAT THIS IS ---------- */
+/* The definition of the week, in BLATW's own words. Sized between the
+   section ledes and the thank-you letter so it reads as the statement
+   the page opens with, not as a caption. */
+.about-lede{
+  margin-top:1.6rem;max-width:74ch;
+  font-size:clamp(.95rem,1.65vw,1.14rem);line-height:1.95;color:var(--dim);
+}
+.about-lede b{color:var(--white);font-weight:400}
+
+/* ---------- ORG WALL (logos, as the live site shows them) ---------- */
+/* explicit column counts, all of which divide twelve — the wall never
+   ends on a half-empty row */
+.orgwall{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;
+  background:var(--line);border:1px solid var(--line);margin-top:2.4rem}
+@media(min-width:520px){.orgwall{grid-template-columns:repeat(3,1fr)}}
+@media(min-width:760px){.orgwall{grid-template-columns:repeat(4,1fr)}}
+@media(min-width:1020px){.orgwall{grid-template-columns:repeat(6,1fr)}}
+@media(min-width:760px){.orgcell img{max-height:58px}}
+@media(min-width:1020px){.orgcell img{max-height:62px}}
+/* a fixed cell height keeps the wall on its grid whatever shape each
+   logo is — wordmarks, roundels and tall lockups all sit on one baseline */
+.orgcell{background:var(--panel);height:clamp(104px,11vw,132px);display:grid;place-items:center;
+  padding:1.1rem;overflow:hidden;text-decoration:none;transition:background .2s}
+.orgcell:hover{background:var(--panel-2)}
+.orgcell img{max-width:84%;max-height:52px;width:auto;height:auto;object-fit:contain;
+  filter:grayscale(1) brightness(1.9) contrast(.92);opacity:.72;transition:filter .25s,opacity .25s}
+.orgcell:hover img{filter:none;opacity:1}
+.orgcell .nm{display:none}
+
+/* ---------- PARTNER WALL ---------- */
+.partners{margin-top:2.2rem}
+.partner img{max-width:100%;max-height:64px;width:auto;object-fit:contain;
+  filter:grayscale(1) brightness(1.9) contrast(.92);opacity:.72;transition:filter .25s,opacity .25s}
+.partner:hover img{filter:none;opacity:1}
+.partner span{display:block;font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--dim-2);margin-top:.75rem}
+
+/* ---------- VIEWS ---------- */
+main[hidden]{display:none}
+nav.main a[aria-current="page"]{color:var(--white);border-bottom-color:var(--violet)}
+
+/* ---------- THANK YOU + IMPACT ---------- */
+.letter{max-width:70ch;margin:0 auto;text-align:center;font-size:.95rem;line-height:2;color:var(--dim)}
+.letter b{color:var(--white);font-weight:400}
+.letter .sign{display:block;margin-bottom:1.4rem;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:var(--violet)}
+
+.impact{position:relative;overflow:hidden;border-block:1px solid var(--line)}
+.impact-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 44%;opacity:.34;filter:grayscale(.4)}
+.impact::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.94),rgba(0,0,0,.6) 55%,rgba(0,0,0,.9))}
+.impact-in{position:relative;z-index:2;display:grid;gap:clamp(1.6rem,4vw,3rem);padding-block:clamp(3rem,7vw,5.5rem)}
+@media(min-width:820px){.impact-in{grid-template-columns:1fr 1fr;align-items:center}}
+.impact h2{font-size:clamp(1.4rem,3.4vw,2.6rem);text-transform:uppercase;line-height:1.16}
+.impact-nums{display:flex;flex-direction:column;gap:.6rem}
+.impact-nums li{list-style:none;display:flex;align-items:baseline;gap:.9rem;font-family:var(--f-display);font-size:clamp(1.2rem,2.8vw,2rem);color:var(--white)}
+/* tabular figures so the row doesn't jitter while the count runs */
+.impact-nums .num{font-weight:400;font-variant-numeric:tabular-nums;letter-spacing:.02em}
+.impact-nums span{font-size:.62rem;letter-spacing:.2em;text-transform:uppercase;color:var(--dim);font-family:var(--f-mono)}
+
+/* ---------- PARTNERS ---------- */
+.partners{margin-top:2.2rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.partner{background:var(--panel);padding:1.8rem 1rem;display:grid;place-items:center;text-align:center;text-decoration:none;transition:background .2s}
+.partner:hover{background:var(--panel-2)}
+.partner-flat{cursor:default}
+.partner-flat:hover{background:var(--panel)}
+.partner b{font-family:var(--f-display);font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:var(--white);font-weight:400;line-height:1.5}
+.partner span{display:block;font-size:.56rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim-2);margin-top:.5rem}
+
+/* ---------- FOOTER ---------- */
+footer{border-top:1px solid var(--line);padding-block:2.8rem 3.6rem;background:var(--panel)}
+.foot{display:flex;flex-wrap:wrap;gap:1.6rem;justify-content:space-between;align-items:flex-end}
+.social{display:flex;flex-wrap:wrap;gap:1.1rem;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase}
+.social a{color:var(--lilac);text-decoration:none;border-bottom:1px solid transparent}
+.social a:hover{border-bottom-color:var(--magenta);color:var(--magenta)}
+.colo{font-size:.62rem;color:var(--dim-2);line-height:2;letter-spacing:.07em}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;scroll-behavior:auto !important}
+}
+</style>
+<style>html{background:#000;color-scheme:dark}</style>
+</head>
+<body>
+
+
+<div artifact-local>
+
+
+
+<div class="wrap">
+  <div class="top">
+    <a class="lock" href="#top" aria-label="Black L.A. Tech Week — home">
+      <img class="lock-mark" src="assets/blatw-wordmark-sm.webp" alt="Black L.A. Tech Week">
+    </a>
+    <nav class="main">
+      <a href="#week" data-nav="home">The Week</a>
+      <a href="#about" data-nav="about">About</a>
+      <a href="#checkin" data-nav="home">Check In</a>
+      <a class="nav-ask" href="#blair" data-nav="blair">Ask BLAIR</a>
+    </nav>
+  </div>
+</div>
+
+<div class="rail">
+  <a href="https://www.youtube.com/@BlackLATechWeek" target="_blank" rel="noopener" title="YouTube">YT</a>
+  <a href="https://www.instagram.com/blacklatechweek/" target="_blank" rel="noopener" title="Instagram">IG</a>
+  <a href="https://www.facebook.com/people/Black-LA-Tech-Week/61581817048501/" target="_blank" rel="noopener" title="Facebook">FB</a>
+  <a href="http://linkedin.com/company/109058311" target="_blank" rel="noopener" title="LinkedIn">IN</a>
+</div>
+
+
+<main id="view-home">
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="top">
+  <div class="hero-art">
+    <img class="hero-img" src="assets/hero.webp" alt="Two attendees in neon blue and magenta light against palm trees — Black L.A. Tech Week key art">
+    <video class="hero-vid" id="hero-vid" muted loop playsinline preload="none"
+           poster="assets/blair-hero-poster.webp" aria-hidden="true" tabindex="-1">
+      <source src="assets/blair-hero.webm" type="video/webm">
+      <source src="assets/blair-hero.mp4" type="video/mp4">
+    </video>
+  </div>
+  <div class="hero-in">
+    <div class="dates">OCT 12–18</div>
+    <h1 class="mega"><img class="mega-mark" src="assets/blatw-wordmark.webp" alt="BLATW — Black L.A. Tech Week"></h1>
+  </div>
+</header>
+
+<!-- ================= THE INTRO ORB ================= -->
+
+
+<!-- ================= THANK YOU + IMPACT ================= -->
+<!-- ================= WHAT THIS IS ================= -->
+<section class="sec" id="whatthisis"><div class="wrap">
+  <p class="eyebrow">What this is</p>
+  <p class="about-lede">
+    Held alongside LA Tech Week, <b>Black LA Tech Week is an annual convening of thought leaders,
+    founders, professionals, and entrepreneurs across technology and the creative economy.</b>
+    The event delivers programming designed for LA's Black and Brown tech community, connecting
+    talent to opportunity, strengthening the innovation ecosystem, and elevating Black leadership
+    and ideas.
+  </p>
+</div></section>
+
+<!-- ================= DIRECTORY ================= -->
+<section class="sec" id="directory"><div class="wrap">
+  <p class="eyebrow">Who are the organizers</p>
+  <h2 class="big">Twelve orgs. One mission.</h2>
+  <p class="lede">Black L.A. Tech Week is a coalition, not an institution.</p>
+  <div class="orgwall" id="board"></div>
+</div></section>
+
+<div class="impact">
+  <img class="impact-bg" src="assets/crowd-mixer.webp" alt="" loading="lazy" aria-hidden="true">
+  <div class="wrap impact-in">
+    <h2>2025 Impact<br>by the numbers</h2>
+    <ul class="impact-nums">
+      <li><b class="num" data-to="5">5</b> <span>Events</span></li>
+      <li><b class="num" data-to="12">12</b> <span>Black Orgs</span></li>
+      <li><b class="num" data-to="2000" data-suffix="+">2,000+</b> <span>Attendees</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ================= THE WEEK ================= -->
+<section class="sec" id="week"><div class="wrap">
+  <p class="eyebrow">The Week</p>
+  <h2 class="big">Los Angeles Takeover.</h2>
+  <p class="lede">Check out our list for the week, or tap <button type="button" class="inline-blair" data-open-blair>BLAIR</button> to help you RSVP for the events you want to attend.</p>
+  <div class="days days-14">
+    <a class="day" href="https://partiful.com/e/stWDAXCuaf7y7eaUdFik" target="_blank" rel="noopener">
+      <span class="n">MON · OCT 12</span>
+      <h3>Masterclass: Immersive Storyworld Building & AI Animation</h3>
+      <span class="when">11:00 AM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/cHx0gJyRlzxCPa28SrEt" target="_blank" rel="noopener">
+      <span class="n">MON · OCT 12</span>
+      <h3>The New Beauty Counter: Wellness + Beauty Tech</h3>
+      <span class="when">6:00 PM · Venue TBA</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/Aqo3myC81kLLAPFIf8IE" target="_blank" rel="noopener">
+      <span class="n">MON · OCT 12</span>
+      <h3>Black LA Tech Week Mixer</h3>
+      <span class="when">6:30 PM · TBD</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/H1tqHcveViy0WaTz5wSc" target="_blank" rel="noopener">
+      <span class="n">TUE · OCT 13</span>
+      <h3>LDU AI Academy</h3>
+      <span class="when">11:30 AM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/2euWvYm12xlYZ6Zzbgze" target="_blank" rel="noopener">
+      <span class="n">TUE · OCT 13</span>
+      <h3>Engineering The Future</h3>
+      <span class="when">6:30 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/2t25GwU3w8JvnNhkH6yC" target="_blank" rel="noopener">
+      <span class="n">TUE · OCT 13</span>
+      <h3>BEYOND THE COUNTER</h3>
+      <span class="when">Time TBA · Venue TBA</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/eubBhAAG0VplDJMZYVKK" target="_blank" rel="noopener">
+      <span class="n">WED · OCT 14</span>
+      <h3>Co-Work + Coffee</h3>
+      <span class="when">9:30 AM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/3aLkhDtF0RMkQZsrPYrz" target="_blank" rel="noopener">
+      <span class="n">WED · OCT 14</span>
+      <h3>Tech Connect LA Meetup</h3>
+      <span class="when">6:30 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/HezCL7LvoObzaGVxWchS" target="_blank" rel="noopener">
+      <span class="n">WED · OCT 14</span>
+      <h3>BLATW Cybersecurity Panel</h3>
+      <span class="when">7:00 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/b7f3FnrhOoYW3x5dvqbY" target="_blank" rel="noopener">
+      <span class="n">THU · OCT 15</span>
+      <h3>AI for Biz Workshop</h3>
+      <span class="when">4:00 PM · Microsoft</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/gzigzgGfGNU4d0kzL71W" target="_blank" rel="noopener">
+      <span class="n">THU · OCT 15</span>
+      <h3>NSBEProLA Executive + Partners Brunch</h3>
+      <span class="when">7:00 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/odbtV4ovwqoeQeLimJ3d" target="_blank" rel="noopener">
+      <span class="n">FRI · OCT 16</span>
+      <h3>Tech Meets Couture</h3>
+      <span class="when">7:00 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/xH9EECTclaixehbBhvSQ" target="_blank" rel="noopener">
+      <span class="n">FRI · OCT 16</span>
+      <h3>AI Music Concert</h3>
+      <span class="when">7:00 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/6WPLziiH1vydNrlTTppI" target="_blank" rel="noopener">
+      <span class="n">FRI · OCT 16</span>
+      <h3>Tech Unplugged</h3>
+      <span class="when">7:00 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/U8IR7lkNIYFRWaVGBiFk" target="_blank" rel="noopener">
+      <span class="n">SAT · OCT 17</span>
+      <h3>LDU Open House Fundraiser</h3>
+      <span class="when">7:00 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/v75ogLCMMekNBnJAF1cP" target="_blank" rel="noopener">
+      <span class="n">SUN · OCT 18</span>
+      <h3>Future Builders : Family STEM Day</h3>
+      <span class="when">2:00 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+  </div>
+</div></section>
+
+<!-- ================= RECAP BAND ================= -->
+<div class="band">
+  <img src="assets/band-2025.webp" alt="An attendee being photographed in front of the Black L.A. Tech Week backdrop" loading="lazy">
+  <div class="band-cap wrap"><b>October 2025 was a vibe</b></div>
+</div>
+
+<!-- ================= CHECK IN ================= -->
+<section class="sec" id="checkin"><div class="wrap">
+  <p class="eyebrow">Check In</p>
+  <h2 class="big">Sign the guest book.</h2>
+  <p class="lede">Join our community, stay connected and keep up with all the things happening throughout the week.</p>
+
+  <div class="gb">
+    <form class="form" id="checkin-form" name="guestbook" method="POST"
+          data-netlify="true" netlify-honeypot="company-website">
+      <input type="hidden" name="form-name" value="guestbook">
+      <p hidden><label>Leave this empty: <input name="company-website"></label></p>
+      <div class="field"><label for="ci-name">Name</label><input id="ci-name" name="name" required maxlength="60" autocomplete="name"></div>
+      <div class="field"><label for="ci-org">Org or role</label><input id="ci-org" name="org" required maxlength="60" placeholder="NSBE LA · backend eng"></div>
+      <div class="field"><label for="ci-work">What are you building?</label><input id="ci-work" name="building" maxlength="110" placeholder="One line"></div>
+      <div class="field"><label for="ci-email">Email — for event updates</label><input id="ci-email" name="email" type="email" maxlength="90" autocomplete="email" placeholder="optional"></div>
+      <button type="submit">Check in</button>
+      <p class="fine" id="ci-note">Name, org and your one line go on the public wall — everyone who opens this page sees them. Your email goes to the organizers only, for event updates.</p>
+    </form>
+
+    <figure class="gb-art">
+      <img src="assets/crowd-room.webp" alt="Attendees under blue and violet stage light during Black L.A. Tech Week" loading="lazy">
+    </figure>
+  </div>
+
+  <ul class="wall" id="wall" artifact-sync></ul>
+  <p class="wall-empty" id="wall-empty">The wall is empty — be the first to sign it.</p>
+</div></section>
+
+</main>
+
+<main id="view-about" hidden>
+
+<!-- ================= PEOPLE ================= -->
+<section class="sec" id="about" style="border-top:0"><div class="wrap">
+  <p class="eyebrow">Who Runs It</p>
+  <h2 class="big">The board.</h2>
+
+  <div class="roster" id="roster"></div>
+
+  <p class="unmapped" id="unmapped" hidden></p>
+
+  <div class="people" id="people"></div>
+</div></section>
+
+<!-- The attendee survey and the Tech Check soundtrack block were pulled at
+     the team's request — the survey isn't needed right now, and the song
+     comes back when there's a current track to put in it. -->
+
+<!-- ================= PARTNERS ================= -->
+<section class="sec" id="partners"><div class="wrap">
+  <p class="eyebrow">Partners</p>
+  <h2 class="big">Our partners.</h2>
+  <p class="lede">Our community that documented and amplified the week.</p>
+  <div class="partners">
+    <a class="partner" href="https://kbla1580.com" target="_blank" rel="noopener"><b data-logo="kbla1580">KBLA 1580</b></a>
+    <div class="partner partner-flat"><b>Microsoft</b></div>
+    <div class="partner partner-flat"><b>Life Development<br>University</b></div>
+    <a class="partner" href="https://joinlinks.app" target="_blank" rel="noopener"><b>Join Links</b></a>
+  </div>
+</div></section>
+
+</main>
+
+
+<main id="view-blair" hidden>
+
+<section class="sec intro-orb" id="captain" style="border-top:0"><div class="wrap orb-split">
+
+  <div class="orb-side">
+    <div class="orb-wrap">
+      <span class="ring"></span><span class="ring"></span><span class="ring"></span>
+      <button class="orb" type="button" id="orb-hear" aria-label="Tap to hear BLAIR">
+        <span>BLAIR</span>
+      </button>
+    </div>
+    <p class="orb-sub">Black L.A. Tech Week · Captain of the front door</p>
+    <p class="orb-tap"><span aria-hidden="true">&#9654;</span> Tap the orb to hear her — or just ask</p>
+  </div>
+
+  <div class="ask-side">
+    <p class="eyebrow">Ask BLAIR</p>
+    <div class="orb-log" id="orb-log" role="log" aria-live="polite" aria-label="BLAIR's answers"></div>
+    <div class="chips orb-chips" id="orb-chips"></div>
+    <form class="orb-ask" id="orb-ask">
+      <button class="orb-mic orb-speaker" id="orb-speaker" type="button" aria-pressed="false" title="Hear BLAIR" aria-label="Hear BLAIR"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="4 9 8 9 13 5 13 19 8 15 4 15" fill="currentColor" stroke="none"/><path class="wave1" d="M16.5 8.8a4.5 4.5 0 0 1 0 6.4"/><path class="wave2" d="M19.2 6.2a8 8 0 0 1 0 11.6"/></svg></button>
+      <button class="orb-mic" id="orb-mic" type="button" title="Speak your question" aria-label="Speak your question"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><line x1="12" y1="17" x2="12" y2="22"/></svg></button>
+      <input id="orb-input" type="text" autocomplete="off" placeholder="Ask BLAIR about the week…" aria-label="Ask BLAIR">
+      <button class="orb-send" type="submit" title="Send" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="6 11 12 5 18 11"/></svg></button>
+    </form>
+    <p class="grounded">Grounded in blacklatechweek.com · published material only</p>
+  </div>
+
+</div></section>
+
+</main>
+
+<footer><div class="wrap">
+  <div class="foot">
+    <div>
+      <p class="eyebrow" style="margin-bottom:.9rem">Find Us</p>
+      <div class="social">
+        <a href="https://www.instagram.com/blacklatechweek/" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/people/Black-LA-Tech-Week/61581817048501/" target="_blank" rel="noopener">Facebook</a>
+        <a href="http://linkedin.com/company/109058311" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@BlackLATechWeek" target="_blank" rel="noopener">YouTube</a>
+      </div>
+    </div>
+    <p class="colo">
+      BLACK L.A. TECH WEEK · LOS ANGELES<br>
+      CONTENT SOURCED FROM BLACKLATECHWEEK.COM
+    </p>
+  </div>
+</div></footer>
+
+
+<!-- ================= BLAIR · DOCKED ================= -->
+<div class="dock" id="dock" data-size="small">
+  <button class="launcher" id="launcher" type="button" aria-expanded="false" aria-controls="panel">
+    <span class="launch-pill">Questions? Ask BLAIR</span>
+    <span class="launch-orb"><span class="lring"></span><span class="lring"></span><span class="lring"></span><b>B</b></span>
+  </button>
+
+  <section class="panel" id="panel" aria-label="Chat with BLAIR" hidden>
+    <header class="panel-head">
+      <div>
+        <span class="panel-name">BLAIR</span>
+        <span class="panel-role">Black L.A. Tech Week · Captain</span>
+      </div>
+      <div class="panel-ctl">
+        <button class="pbtn" id="voice" type="button" aria-pressed="false" title="Read replies aloud">&#128266; Voice</button>
+        <button class="pbtn" id="expand" type="button" title="Expand">&#10530;</button>
+        <button class="pbtn" id="closep" type="button" title="Close">&#10005;</button>
+      </div>
+    </header>
+
+    <div class="log" id="log" role="log" aria-live="polite" aria-label="Conversation with BLAIR"></div>
+    <div class="chips" id="chips"></div>
+    <p class="prov" id="prov">Everything BLAIR says comes from what Black L.A. Tech Week has published. For the deeper read, <a href="#directory">meet the twelve orgs</a>.<span id="vsrc" class="vsrc" hidden></span></p>
+
+    <form class="ask" id="ask">
+      <input id="input" type="text" autocomplete="off" placeholder="Ask BLAIR anything…" aria-label="Ask BLAIR">
+      <button class="iconbtn" id="mic" type="button" title="Speak your question" aria-label="Speak your question" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><line x1="12" y1="17" x2="12" y2="22"/></svg></button>
+      <button class="iconbtn send" id="send" type="submit" title="Send" aria-label="Send"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="6 11 12 5 18 11"/></svg></button>
+    </form>
+  </section>
+</div>
+
+</div>
+
+<script>
+/* ============================================================
+   BLAIR VOICE MAP
+   key -> audio URL or data: URI, keyed by a hash of the exact
+   line BLAIR speaks. Generated OFFLINE with ElevenLabs — see
+   blair-voice-build.mjs. No API key ever reaches the browser,
+   nothing is generated at request time, and there is no
+   per-visitor cost. Empty map = BLAIR falls back to the
+   browser's own speech synthesis.
+   ============================================================ */
+window.BLAIR_VOICE_MAP = window.BLAIR_VOICE_MAP || {};
+window.BLAIR_LIVE_VOICE = true;
+/* Live TTS endpoint (Innerface `speak` edge function). Repoint this at
+   BLATW's own Supabase project once it has one, so voice bills to BLATW. */
+window.BLAIR_SPEAK_URL = "/api/speak";
+/* Fallback keeps her talking until BLATW has its own ElevenLabs key. */
+window.BLAIR_SPEAK_FALLBACK_URL = "https://mcqohxkbsvysogacjiep.supabase.co/functions/v1/speak";
+/* Portrait sources — file paths on a host, inlined data: URIs in the
+   single-file build. The roster reads whichever it is handed. */
+window.BLAIR_PORTRAITS = {"portrait-01": "assets/portrait-01.webp", "portrait-02": "assets/portrait-02.webp", "portrait-03": "assets/portrait-03.webp", "portrait-04": "assets/portrait-04.webp", "portrait-05": "assets/portrait-05.webp", "portrait-06": "assets/portrait-06.webp", "portrait-07": "assets/portrait-07.webp", "portrait-08": "assets/portrait-08.webp", "portrait-09": "assets/portrait-09.webp", "portrait-10": "assets/portrait-10.webp", "portrait-11": "assets/portrait-11.webp", "portrait-12": "assets/portrait-12.webp", "portrait-13": "assets/portrait-13.webp", "portrait-14": "assets/portrait-14.webp"};
+/* Org and partner logos, and the headshots, keyed by the slugs the live
+   site uses for its own files. */
+window.BLAIR_LOGOS = {"ai-chicks": "assets/logo-ai-chicks.webp", "black-education-expo": "assets/logo-black-education-expo.webp", "bpn-la": "assets/logo-bpn-la.webp", "cf-compton-fest": "assets/logo-cf-compton-fest.webp", "genfinity-cyber": "assets/logo-genfinity-cyber.webp", "hidden-genius-project": "assets/logo-hidden-genius-project.webp", "kbla1580": "assets/logo-kbla1580.webp", "kscope": "assets/logo-kscope.webp", "makala-lee-photography": "assets/logo-makala-lee-photography.webp", "micah-the-kreator": "assets/logo-micah-the-kreator.webp", "nsbe-la": "assets/logo-nsbe-la.webp", "ocean-lifestyle": "assets/logo-ocean-lifestyle.webp", "out-of-office": "assets/logo-out-of-office.webp", "paradym": "assets/logo-paradym.webp", "tec-leimert": "assets/logo-tec-leimert.webp", "the-gathering-spot": "assets/logo-the-gathering-spot.webp", "we-are-science": "assets/logo-we-are-science.webp"};
+window.BLAIR_HEADS = {"braheem-randall": "assets/head-braheem-randall.webp", "chanise-robinson": "assets/head-chanise-robinson.webp", "deshawn-edwards": "assets/head-deshawn-edwards.webp", "dominique-burrell": "assets/head-dominique-burrell.webp", "eric-elder": "assets/head-eric-elder.webp", "jay-williams": "assets/head-jay-williams.webp", "kelly-marble": "assets/head-kelly-marble.webp", "paris-mccoy": "assets/head-paris-mccoy.webp", "rashidi-jones": "assets/head-rashidi-jones.webp", "stephen-barrios": "assets/head-stephen-barrios.webp", "tynesha-bonds": "assets/head-tynesha-bonds.webp", "tyrie-mitchell": "assets/head-tyrie-mitchell.webp", "victoria-williams": "assets/head-victoria-williams.webp", "yonathan-hugos": "assets/head-yonathan-hugos.webp"};
+</script>
+
+<script>
+(function(){
+"use strict";
+
+/* =========================================================
+   REAL DATA — scraped from blacklatechweek.com
+   ========================================================= */
+var ORGS = [
+  ["Hidden Genius Project","Training and mentoring young Black men in software and entrepreneurship","https://www.hiddengeniusproject.org/","hidden-genius-project"],
+  ["TEC Leimert","Leimert Park's tech and entrepreneurship center","http://tecleimert.org","tec-leimert"],
+  ["Out of Office","Community and travel for Black creatives and technologists","https://www.takemeoutofoffice.com/","out-of-office"],
+  ["Black Professional Network LA","Professional network for Black talent across LA","https://mybpn.org/losangeles/","bpn-la"],
+  ["NSBE LA","National Society of Black Engineers, LA chapter","https://nsbe.org/","nsbe-la"],
+  ["Black Education Expo","College and career pathways for Black students","https://www.blackeducationexpo.com/","black-education-expo"],
+  ["We Are Science","STEM access and science literacy programming","http://wearescience.org","we-are-science"],
+  ["Paradym","Design and creative practice","https://paradym.myportfolio.com/work","paradym"],
+  ["Ocean AI","AI and lifestyle programming","https://www.oceanlifestyle.org/","ocean-lifestyle"],
+  ["The Gathering Spot","Members' club and cultural hub","https://thegatheringspot.place/","the-gathering-spot"],
+  ["K-Scope","AI products and tooling","https://www.kscope.ai/","kscope"],
+  ["Genfinity","Cybersecurity training and services","https://genfinitycyber.com","genfinity-cyber"]
+];
+
+var PEOPLE = [
+  ["Kelly Marble","Ocean AI","https://www.oceanlifestyle.org/"],
+  ["Stephen Barrios","Dev Color","http://devcolor.org"],
+  ["Jay Williams","Paradym","https://paradym.myportfolio.com/work"],
+  ["Chanise Robinson","Out of Office","https://www.instagram.com/outofofficetour/"],
+  ["Rashidi Jones","TEC Leimert","https://www.tecleimert.org/"],
+  ["Paris McCoy","TEC Leimert","https://www.tecleimert.org/"],
+  ["Tynesha Bonds","NSBE LA","https://www.nsbeprola.org/"],
+  ["Dr. Dominique Burrell","BPN LA","https://mybpn.org/losangeles/"],
+  ["Eric Elder","OW! Entertainment","https://www.erictelder.com/"],
+  ["Braheem Randall","Partner org","https://www.linkedin.com/in/braheem-randall-7082968b"],
+  ["Deshawn Edwards","Genfinity","https://genfinitycyber.com"],
+  ["Victoria Williams","Black Education Expo","https://blackeducationexpo.com"],
+  ["Yonathan Hugos","K-Scope","https://www.kscope.ai/"],
+  ["Tyrie Mitchell","We Are Science","http://wearescience.org"]
+];
+
+/* Org logos, keyed to the artwork the live site publishes. */
+var ORG_LOGO = window.BLAIR_LOGOS || {};
+var board = document.getElementById("board");
+ORGS.forEach(function(o){
+  var a = document.createElement("a");
+  a.className="orgcell"; a.href=o[2]; a.target="_blank"; a.rel="noopener";
+  a.title = o[0] + " — " + o[1];
+  var src = ORG_LOGO[o[3]];
+  a.innerHTML = src
+    ? '<img alt="' + o[0] + '" loading="lazy">'
+    : '<span class="nm" style="display:block;font-family:var(--f-display);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;text-align:center;color:var(--white)"></span>';
+  if(src){ a.querySelector("img").src = src; }
+  else { a.querySelector(".nm").textContent = o[0]; }
+  board.appendChild(a);
+});
+
+/* Portrait ↔ name mapping. Confirmed against the live site's organizations
+   grid; anyone still unconfirmed renders WITHOUT a face rather than risk
+   putting a real person's name under the wrong photo. */
+var ROSTER = [
+  ["Stephen Barrios",       "Co-Lead",     "portrait-12", "http://devcolor.org", "stephen-barrios"],
+  ["Paris McCoy",           "Co-Lead",     "portrait-14", "https://www.tecleimert.org/", "paris-mccoy"],
+  ["Kelly Marble",          "Co-Lead",     "portrait-08", "https://www.oceanlifestyle.org/", "kelly-marble"],
+  ["Rashidi Jones",         "Co-Lead",     "portrait-01", "https://www.tecleimert.org/", "rashidi-jones"],
+  ["Jay Williams",          "Partner Org", "portrait-07", "https://paradym.myportfolio.com/work", "jay-williams"],
+  ["Chanise Robinson",      "Partner Org", "portrait-13", "https://www.instagram.com/outofofficetour/", "chanise-robinson"],
+  ["Tynesha Bonds",         "Partner Org", "portrait-04", "https://www.nsbeprola.org/", "tynesha-bonds"],
+  ["Dr. Dominique Burrell", "Partner Org", "portrait-06", "https://mybpn.org/losangeles/", "dominique-burrell"],
+  ["Eric Elder",            "Partner Org", "portrait-05", "https://www.erictelder.com/", "eric-elder"],
+  ["Braheem Randall",       "Partner Org", "portrait-02", "https://www.linkedin.com/in/braheem-randall-7082968b", "braheem-randall"],
+  ["Deshawn Edwards",       "Partner Org", "portrait-03", "https://genfinitycyber.com", "deshawn-edwards"],
+  ["Victoria Williams",     "Partner Org", "portrait-10", "https://blackeducationexpo.com", "victoria-williams"],
+  ["Yonathan Hugos",        "Partner Org", "portrait-11", "https://www.kscope.ai/", "yonathan-hugos"],
+  ["Tyrie Mitchell",        "Partner Org", "portrait-09", "http://wearescience.org", "tyrie-mitchell"]
+];
+
+var PORTRAITS = window.BLAIR_PORTRAITS || {};
+var HEADS = window.BLAIR_HEADS || {};
+var roster = document.getElementById("roster");
+var pending = 0;
+ROSTER.forEach(function(m){
+  var a = document.createElement("article");
+  /* Prefer the headshot the live site publishes under this person's own
+     name — that file IS the mapping, so no face can land on a wrong name. */
+  var src = HEADS[m[4]] || PORTRAITS[m[2]] || "";
+  var photo = src
+    ? '<div class="member-photo"><img src="' + src + '" alt="' + m[0] + '" loading="lazy"></div>'
+    : '<div class="member-photo" data-note="portrait not matched yet"></div>';
+  a.className = "member" + (src ? "" : " pending");
+  if(!src) pending++;
+  a.innerHTML = photo +
+    '<div><span class="member-role"></span><h3 class="member-name"></h3>' +
+    '<a class="member-cta" target="_blank" rel="noopener">Learn more</a></div>';
+  a.querySelector(".member-role").textContent = m[1];
+  a.querySelector(".member-name").textContent = m[0];
+  a.querySelector(".member-cta").href = m[3];
+  roster.appendChild(a);
+});
+if(pending){
+  var u = document.getElementById("unmapped");
+  u.hidden = false;
+  u.innerHTML = '<b>' + pending + ' portraits still to match</b> — the photo files arrived in a different order than the site lists them, so these names carry no face until the mapping is confirmed. Nobody gets someone else\'s picture.';
+}
+
+var people = document.getElementById("people");
+PEOPLE.forEach(function(p){
+  var a = document.createElement("a");
+  a.className="pill"; a.href=p[2]; a.target="_blank"; a.rel="noopener";
+  a.innerHTML = '<b></b><span></span>';
+  a.querySelector("b").textContent = p[0];
+  a.querySelector("span").textContent = p[1];
+  people.appendChild(a);
+});
+
+/* =========================================================
+   THE CAPTAIN
+   Intent matching + guided flows over the real BLATW data.
+   ========================================================= */
+/* Two independent places BLAIR can be talked to: the big orb on her card,
+   and the docked panel behind the launcher. Separate transcripts, separate
+   flow state, one brain. */
+function Surface(logId, chipsId, inputId, orbSel){
+  this.log   = document.getElementById(logId);
+  this.chips = document.getElementById(chipsId);
+  this.input = document.getElementById(inputId);
+  this.orb   = orbSel ? document.querySelector(orbSel) : null;
+  this.flow  = null;
+}
+var PANEL = new Surface("log", "chips", "input", ".launch-orb");
+var ORB   = new Surface("orb-log", "orb-chips", "orb-input", ".orb");
+
+var ORG_LIST = ORGS.map(function(o){
+  return '<li><a href="'+o[2]+'" target="_blank" rel="noopener">'+o[0]+'</a> — '+o[1]+'</li>';
+}).join("");
+
+/* ---------- what each org is actually for ---------- */
+var ORG_TAGS = {
+  "Hidden Genius Project":["youth","students","engineering","entrepreneurship","mentorship","training"],
+  "TEC Leimert":["entrepreneurship","community","workspace","local","training"],
+  "Out of Office":["creative","community","networking","design"],
+  "Black Professional Network LA":["career","networking","professional","hiring","mentorship"],
+  "NSBE LA":["engineering","students","career","networking"],
+  "Black Education Expo":["students","youth","education","career"],
+  "We Are Science":["science","education","youth","students"],
+  "Paradym":["design","creative","product"],
+  "Ocean AI":["ai","creative","community","product"],
+  "The Gathering Spot":["networking","community","professional","entrepreneurship"],
+  "K-Scope":["ai","product","engineering","entrepreneurship"],
+  "Genfinity":["cybersecurity","training","career","engineering"]
+};
+
+function orgByName(n){ for(var i=0;i<ORGS.length;i++){ if(ORGS[i][0]===n) return ORGS[i]; } return null; }
+
+/* Each org's FIRST tag is what it is primarily for — matching it counts
+   for more, so "engineering" leads with NSBE rather than a youth program
+   that also happens to teach engineering. */
+function routeOrgs(tags, n){
+  if(!tags || !tags.length) return [];
+  var scored = [];
+  for(var name in ORG_TAGS){
+    var t = ORG_TAGS[name], s = 0;
+    for(var i=0;i<tags.length;i++){
+      if(t.indexOf(tags[i])>-1) s += (t[0] === tags[i]) ? 3 : 1;
+    }
+    if(s>0) scored.push({name:name, s:s});
+  }
+  scored.sort(function(a,b){ return b.s - a.s; });
+  return scored.slice(0, n||3).map(function(x){ return orgByName(x.name); }).filter(Boolean);
+}
+
+function orgLines(list){
+  if(!list.length) return "";
+  return "<ul>" + list.map(function(o){
+    return '<li><a href="'+o[2]+'" target="_blank" rel="noopener">'+o[0]+'</a> — '+o[1]+'</li>';
+  }).join("") + "</ul>";
+}
+
+/* ---------- knowledge base ---------- */
+var KB = [
+  { id:"dates",
+    k:["when","date","dates","2026","next","happening","time of year","schedule","upcoming"],
+    a:'<p><b>October 12–18, 2026</b> — Monday through Sunday.</p><p>Sixteen events are up with RSVP links, from an 11 AM masterclass on the Monday to Family STEM Day on the Sunday. The full list is under <b>The Week</b>.</p>',
+    c:["What happened in 2025?","Where is it held?","Check me in"] },
+
+  { id:"where",
+    k:["where","venue","address","location","adams","held","place","neighborhood","west adams"],
+    a:'<p>It moves around — each event carries its own venue. Most of the week sits at <b>LDU</b>, with one at <b>Microsoft</b>.</p><p>The exact address for any event is on its Partiful page; the full list is under <b>The Week</b>.</p>',
+    c:["How do I get there?","What happened each night?","Who runs this?"] },
+
+  { id:"travel",
+    k:["parking","park","transit","metro","bus","drive","uber","lyft","getting there","how do i get there","rideshare","train"],
+    a:'<p>Nothing about parking or transit is published, so I won\'t make it up.</p><p>Each event\'s Partiful page carries its address — start there, and check <a href="https://www.instagram.com/blacklatechweek/" target="_blank" rel="noopener">Instagram</a> closer to the date, which is where logistics get posted.</p>',
+    c:["Where is it held?","When is it?"] },
+
+  { id:"access",
+    k:["accessible","accessibility","wheelchair","ada","disability","asl","interpreter","captions","mobility"],
+    a:'<p>No accessibility information is published on the site — I\'d rather say that plainly than guess at it.</p><p>For a real answer, ask the organizers directly on <a href="https://www.instagram.com/blacklatechweek/" target="_blank" rel="noopener">Instagram</a> or <a href="http://linkedin.com/company/109058311" target="_blank" rel="noopener">LinkedIn</a>. It\'s a fair question and it should be on the site.</p>',
+    c:["How do I contact them?","Where is it held?"] },
+
+  { id:"program",
+    k:["event","events","program","lineup","night","nights","sessions","agenda","happened","2025","what was","talks","workshops"],
+    a:'<p>Four nights, four different doors:</p><ul><li><b>Mon Oct 13</b> — Black L.A. Mixer · 6–10 PM</li><li><b>Tue Oct 14</b> — Engineering the Future · 6–10 PM</li><li><b>Wed Oct 15</b> — Breaking into IT &amp; Cybersecurity · 7–11 PM</li><li><b>Thu Oct 16</b> — Tech Unplugged · 7–11 PM</li></ul><p class="k">2,000+ people across the week. No session descriptions or speaker lists were published for any of them.</p>',
+    c:["Show me photos","Which night was for me?","When is it?"] },
+
+  { id:"orgs",
+    k:["org","orgs","organization","organizations","partner","partners","coalition","directory","member","members","community","twelve"],
+    a:'<p>Twelve Black organizations run this together — it\'s a coalition, not one institution:</p><ul>'+ORG_LIST+'</ul>',
+    c:["Which one fits me?","Who are the leads?"] },
+
+  { id:"leads",
+    k:["lead","leads","leadership","team","founder","organizer","organizers","runs","charge","kelly","stephen","marble","barrios"],
+    a:'<p>Four co-leads: <b>Stephen Barrios</b> (/dev/color), <b>Paris McCoy</b> (TEC Leimert), <b>Kelly Marble</b> (Ocean AI) and <b>Rashidi Jones</b> (TEC Leimert), with ten partner-org representatives behind them.</p><p>The full roster is further down — every name links to their org.</p>',
+    c:["Which orgs are involved?","How do I get involved?"] },
+
+  { id:"newcomer",
+    k:["new","break into","breaking in","start","beginner","no experience","career change","switch","getting started","degree","bootcamp","junior","entry","self taught"],
+    a:'<p>You\'re the person this week was built for. Wednesday night in 2025 was literally <b>Breaking into IT &amp; Cybersecurity</b> — no degree required to walk in.</p><p>Tell me what area you\'re aiming at and I\'ll name the two or three orgs that actually fit.</p>',
+    c:["Find my org","Are there jobs posted?","Check me in"] },
+
+  { id:"jobs",
+    k:["job","jobs","hiring","role","roles","opening","openings","career","careers","apprenticeship","internship","recruit","resume","cv"],
+    a:'<p>Nothing is posted here — there\'s no roles board on the site, and I\'d rather say that than send you to an empty page.</p><p>Where LA roles actually circulate: <a href="https://mybpn.org/losangeles/" target="_blank" rel="noopener">Black Professional Network LA</a> and <a href="http://devcolor.org" target="_blank" rel="noopener">/dev/color</a>.</p>',
+    c:["Find my org","How do I contact them?"] },
+
+  { id:"student",
+    k:["student","students","college","university","school","teen","youth","kid","child","high school","csulb","ucla","scholarship"],
+    a:'<p>Four of the twelve work directly with students and young people:</p>'+orgLines(routeOrgs(["students","youth","education"],4)),
+    c:["Find my org","I\'m new to tech","Check me in"] },
+
+  { id:"cyber",
+    k:["cyber","cybersecurity","security","infosec","hacking","soc","pentest","it support","help desk","comptia"],
+    a:'<p>Cybersecurity has a real front door here. <a href="https://genfinitycyber.com" target="_blank" rel="noopener">Genfinity</a> runs training and services, and the 2025 week gave it a full night — <b>Breaking into IT &amp; Cybersecurity</b>, Wednesday Oct 15.</p>',
+    c:["Find my org","Are there jobs posted?"] },
+
+  { id:"ai",
+    k:["ai","artificial intelligence","machine learning","ml","llm","data","data science","prompt"],
+    a:'<p>Two of the twelve are AI-first:</p>'+orgLines(routeOrgs(["ai"],3)),
+    c:["Find my org","Which orgs are involved?"] },
+
+  { id:"design",
+    k:["design","designer","ux","ui","creative","brand","art","product design","portfolio"],
+    a:'<p>The creative side of the coalition:</p>'+orgLines(routeOrgs(["design","creative"],3)),
+    c:["Find my org","Which orgs are involved?"] },
+
+  { id:"engineering",
+    k:["engineer","engineering","developer","software","coding","backend","frontend","devops","hardware","stem"],
+    a:'<p>For engineers specifically:</p>'+orgLines(routeOrgs(["engineering"],4))+'<p class="k">Tuesday of the 2025 week — <b>Engineering the Future</b> — was the engineering night.</p>',
+    c:["Find my org","Are there jobs posted?"] },
+
+  { id:"founder",
+    k:["founder","startup","company","business","entrepreneur","raise","raising","funding","investor","vc","pitch deck","incubator"],
+    a:'<p>For founders and operators:</p>'+orgLines(routeOrgs(["entrepreneurship"],4))+'<p class="k">No investor programming or demo day is published for the week — that\'s a gap, not a secret.</p>',
+    c:["Find my org","How do I get involved?"] },
+
+  { id:"speak",
+    k:["speak","speaker","speaking","panel","talk","present","keynote","workshop host","teach","moderate"],
+    a:'<p>There\'s no public call for speakers or submission form yet.</p><p>The route that works: pitch the co-leads directly through <a href="http://linkedin.com/company/109058311" target="_blank" rel="noopener">LinkedIn</a> or <a href="https://www.instagram.com/blacklatechweek/" target="_blank" rel="noopener">Instagram</a>, and check in below so you\'re on the list when 2026 programming opens.</p>',
+    c:["Put me on the 2026 list","How do I contact them?"] },
+
+  { id:"sponsor",
+    k:["sponsor","sponsorship","brand","partnership","fund","support financially","deck","tiers","exhibit","booth"],
+    a:'<p>No public sponsorship deck or tier sheet exists yet — worth knowing before you plan around one.</p><p><a href="http://linkedin.com/company/109058311" target="_blank" rel="noopener">LinkedIn</a> is the right channel for partnership conversations. The 2025 week put 2,000+ people through the door across five events with twelve org partners, if you need the numbers.</p>',
+    c:["Put me on the 2026 list","How do I contact them?"] },
+
+  { id:"volunteer",
+    k:["volunteer","volunteering","help out","crew","staff","give back","mentor","mentoring"],
+    a:'<p>Most volunteering happens <b>inside the twelve orgs</b>, not at the coalition level — they\'re the ones running programming year-round.</p><p>Tell me what you\'d want to help with and I\'ll point you at the right two or three.</p>',
+    c:["Find my org","Put me on the 2026 list"] },
+
+  { id:"involved",
+    k:["involved","join","participate","contribute","partner with","host","apply","submit"],
+    a:'<p>Four ways in, in order of how fast they move:</p><ul><li><b>Check in below</b> — you\'re on the list for 2026 and I can point you at the right org.</li><li><b>Go direct to an org</b> — most of the work happens inside the twelve.</li><li><b>Speaking or hosting a night</b> — pitch the co-leads on social.</li><li><b>Sponsorship</b> — same channels; no public deck yet.</li></ul>',
+    c:["Find my org","Put me on the 2026 list"] },
+
+  { id:"photos",
+    k:["photo","photos","gallery","picture","pictures","recap","video","youtube","recording","footage","images"],
+    a:'<p>The 2025 mixer gallery is live — shot by <b>Makala Lee</b>: <a href="https://makala-lee-photos.client-gallery.com/gallery/black-la-tech-week-mixer/tech-unplugged-demos-to-dancefloor-10162025" target="_blank" rel="noopener">Demos to Dancefloor →</a></p><p>Video lands on <a href="https://www.youtube.com/@BlackLATechWeek" target="_blank" rel="noopener">YouTube</a>.</p>',
+    c:["What happened each night?","When is it?"] },
+
+  { id:"contact",
+    k:["contact","email","reach","phone","dm","message","talk to","get in touch","social","instagram","linkedin","press","media"],
+    a:'<p>There\'s no public email or phone — everything runs through social:</p><ul><li><a href="https://www.instagram.com/blacklatechweek/" target="_blank" rel="noopener">Instagram</a> — fastest</li><li><a href="http://linkedin.com/company/109058311" target="_blank" rel="noopener">LinkedIn</a> — partnership, sponsorship, press</li><li><a href="https://www.facebook.com/people/Black-LA-Tech-Week/61581817048501/" target="_blank" rel="noopener">Facebook</a> · <a href="https://www.youtube.com/@BlackLATechWeek" target="_blank" rel="noopener">YouTube</a></li></ul>',
+    c:["How do I get involved?","Check me in"] },
+
+  { id:"survey",
+    k:["survey","feedback","review","suggest","complaint","improve"],
+    a:'<p>There\'s no feedback form up right now.</p><p>The organizers read <a href="https://www.instagram.com/blacklatechweek/" target="_blank" rel="noopener">Instagram</a> — that\'s the fastest way to get something in front of them.</p>',
+    c:["How do I contact them?","How do I get involved?"] },
+
+  { id:"about",
+    k:["what is","about","tell me about","explain","blatw","black la tech week","why","purpose","mission","first","la tech week","annual","convening"],
+    a:'<p><b>Held alongside LA Tech Week</b>, Black LA Tech Week is an annual convening of thought leaders, founders, professionals, and entrepreneurs across technology and the creative economy.</p><p>The event delivers programming designed for LA\'s Black and Brown tech community — connecting talent to opportunity, strengthening the innovation ecosystem, and elevating Black leadership and ideas.</p><p class="k">The first one ran October 2025: twelve Black organizations, five events, 2,000+ people in one week.</p>',
+    c:["Which orgs are involved?","What happened each night?","Find my org"] },
+
+  { id:"ticket",
+    k:["ticket","tickets","cost","price","free","pay","rsvp","register","registration","how much","admission"],
+    a:'<p>2025 registration is <b>closed</b> — all four nights have ended. Pricing for 2026 hasn\'t been set, and I don\'t know whether it was free or paid in 2025; the event pages don\'t say.</p>',
+    c:["Put me on the 2026 list","When is it?"] },
+
+  { id:"captain",
+    k:["who are you","what are you","your name","captain","blair","front desk","concierge","help me","what can you do","options","ai","bot","robot","human","chatbot","assistant"],
+    a:'<p>I\'m BLAIR. I know the week, the twelve orgs, the people who run them, and how to get you to the right one.</p><p>I can <b>find your org</b>, <b>check you in</b>, or <b>put you on the 2026 list</b> — or just answer questions.</p><p class="k">In this prototype I run on scripted logic. In production I\'d be wired to the roles board, the calendar, and the check-in list.</p>',
+    c:["Find my org","Put me on the 2026 list","Check me in"] }
+];
+
+var STOP = {"the":1,"a":1,"an":1,"is":1,"are":1,"do":1,"does":1,"i":1,"you":1,"to":1,"of":1,"for":1,"in":1,"on":1,"at":1,"and":1,"it":1,"me":1,"my":1,"can":1,"there":1,"any":1,"be":1,"was":1,"were":1,"this":1,"that":1};
+
+function norm(s){ return (" "+s.toLowerCase().replace(/[^a-z0-9\s']/g," ")+" ").replace(/\s+/g," "); }
+
+function match(q){
+  var t = norm(q);
+  var words = t.trim().split(" ").filter(function(w){ return w.length>1 && !STOP[w]; });
+  if(!words.length) return null;
+  var best=null, bestScore=0;
+  KB.forEach(function(e){
+    var score=0;
+    e.k.forEach(function(key){
+      if(key.indexOf(" ")>-1){
+        if(t.indexOf(key)>-1) score += key.split(" ").length * 2.4;
+      } else {
+        for(var i=0;i<words.length;i++){
+          if(words[i]===key) score += 2;
+          else if(words[i].length>3 && key.length>3 && (words[i].indexOf(key)===0 || key.indexOf(words[i])===0)) score += 1.1;
+        }
+      }
+    });
+    if(score>bestScore){ bestScore=score; best=e; }
+  });
+  return bestScore >= 2 ? best : null;
+}
+
+/* ---------- transcript ---------- */
+var DEFAULT_CHIPS = [
+  "What is Black LA Tech Week?", "When is it?",
+  "Which orgs are involved?",    "Find my org",
+  "Are there jobs posted?",      "Check me in"
+];
+/* the questions BLAIR opens with, sitting under her greeting from the
+   moment the page loads — nobody should have to think of the first one */
+var ORB_CHIPS = [
+  "What is Black LA Tech Week?", "When is it?", "Which orgs are involved?",
+  "Find my org", "Are there jobs posted?", "How do I get involved?", "Check me in"
+];
+
+function setChips(S, list){
+  if(!S.chips) return;
+  S.chips.innerHTML = "";
+  (list && list.length ? list : DEFAULT_CHIPS).forEach(function(label){
+    var b = document.createElement("button");
+    b.type="button"; b.className="chip"; b.textContent = label;
+    b.addEventListener("click", function(){ handle(S, label); });
+    S.chips.appendChild(b);
+  });
+}
+
+function bubble(S, who, html){
+  var d = document.createElement("div");
+  d.className = "msg in " + (who==="you" ? "you" : "cap");
+  d.innerHTML = '<span class="who">' + (who==="you" ? "You" : "BLAIR") + '</span><div class="bub">' + html + '</div>';
+  S.log.appendChild(d);
+  S.log.scrollTop = S.log.scrollHeight;
+  if(who !== "you") speak(html, S, d.querySelector(".bub"));
+  return d;
+}
+
+function captain(S, html, chips, delay){
+  var t = document.createElement("div");
+  t.className = "msg cap in";
+  t.innerHTML = '<span class="who">BLAIR</span><div class="bub typing"><span></span><span></span><span></span></div>';
+  S.log.appendChild(t);
+  S.log.scrollTop = S.log.scrollHeight;
+  if(S.chips) S.chips.innerHTML = "";
+  setTimeout(function(){
+    t.remove();
+    bubble(S, "cap", html);
+    setChips(S, chips);
+  }, delay || 520);
+}
+
+function esc(s){ var d=document.createElement("div"); d.textContent=s; return d.innerHTML; }
+function first(s){ return esc(String(s).trim().split(/\s+/)[0] || "friend"); }
+
+/* =========================================================
+   GUIDED FLOWS
+   ========================================================= */
+var GOALS = {
+  "Breaking into tech":       ["career","training","mentorship"],
+  "Hiring or recruiting":     ["career","networking","professional","hiring"],
+  "I'm a student":            ["students","youth","education"],
+  "Building a company":       ["entrepreneurship","community","product"],
+  "Just want to connect":     ["networking","community","creative"]
+};
+var AREAS = {
+  "Engineering":       ["engineering"],
+  "Cybersecurity":     ["cybersecurity"],
+  "AI or data":        ["ai"],
+  "Design or creative":["design","creative"],
+  "Not sure yet":      []
+};
+var ROLES = {
+  "Attending":  { tag:"attendee", noun:"an attendee", a:'<p>Easiest one. You\'ll be on the list the day dates are announced — nothing else to do.</p>' },
+  "Speaking":   { tag:"speaker",  noun:"a speaker",   a:'<p>No public call for speakers exists yet, so the real move is pitching the co-leads on <a href="http://linkedin.com/company/109058311" target="_blank" rel="noopener">LinkedIn</a>. Being on this list means you hear the moment programming opens.</p>' },
+  "Sponsoring": { tag:"sponsor",  noun:"a sponsor",   a:'<p>There\'s no public deck or tier sheet yet. <a href="http://linkedin.com/company/109058311" target="_blank" rel="noopener">LinkedIn</a> is the channel — and the number that matters is 2,000+ attendees across five events with twelve org partners.</p>' },
+  "Volunteering":{tag:"volunteer",noun:"a volunteer", a:'<p>Most of it runs through the twelve orgs rather than the coalition. I can point you at the right ones — just ask me to find your org.</p>' },
+  "As a partner org":{tag:"partner",noun:"a partner org",a:'<p>Partner-org conversations go to the co-leads directly — <a href="http://linkedin.com/company/109058311" target="_blank" rel="noopener">LinkedIn</a> is the channel. Twelve orgs ran 2025.</p>' }
+};
+
+function pick(map, text){
+  var t = text.toLowerCase().trim();
+  for(var k in map){ if(k.toLowerCase() === t) return k; }
+  for(var k2 in map){ if(t && k2.toLowerCase().indexOf(t) > -1) return k2; }
+  for(var k3 in map){
+    var words = k3.toLowerCase().replace(/[^a-z\s]/g,"").split(/\s+/);
+    for(var i=0;i<words.length;i++){ if(words[i].length>3 && t.indexOf(words[i])>-1) return k3; }
+  }
+  return null;
+}
+
+var FLOWS = {
+  /* --- put me on the wall --- */
+  checkin: {
+    steps: [
+      { key:"name", ask:function(){ return '<p>Let\'s get you on the wall. <b>What name should I put down?</b></p>'; } },
+      { key:"org",  ask:function(d){ return '<p>Good to have you, '+first(d.name)+'. <b>What org or role goes next to it?</b></p>'; } },
+      { key:"work", ask:function(){ return '<p>Last one — <b>what are you building right now?</b> One line. Say <span class="k">skip</span> to leave it blank.</p>'; }, skip:true }
+    ],
+    done: function(S, d){
+      addGuest(d.name, d.org, d.work);
+      captain(S, '<p><b>Checked in.</b> You\'re on the wall, '+first(d.name)+' — scroll down and you\'ll see yourself.</p><p>Want me to point you at an org while you\'re here?</p>',
+              ["Find my org","Are there jobs posted?","Put me on the 2026 list"], 700);
+    }
+  },
+
+  /* --- which of the twelve fits me --- */
+  match: {
+    steps: [
+      { key:"goal", chips:Object.keys(GOALS),
+        ask:function(){ return '<p>Twelve orgs is a lot of doors. Three questions and I\'ll narrow it to two or three.</p><p><b>What brings you here?</b></p>'; } },
+      { key:"area", chips:Object.keys(AREAS),
+        ask:function(){ return '<p><b>And what area are you working in?</b></p>'; } }
+    ],
+    done: function(S, d){
+      var goal = pick(GOALS, d.goal), area = pick(AREAS, d.area);
+      var tags = (GOALS[goal] || []).concat(AREAS[area] || []);
+      var hits = routeOrgs(tags, 3);
+      if(!hits.length){ hits = routeOrgs(["community","networking"], 3); }
+      var head = goal ? ('<p><b>'+esc(goal)+'</b>' + (area && AREAS[area].length ? ' · <b>'+esc(area)+'</b>' : '') + ' — these are your doors:</p>')
+                      : '<p>Start with these:</p>';
+      captain(S, head + orgLines(hits) + '<p class="k">Go direct — most of the real work happens inside the orgs, not at the coalition level.</p>',
+              ["Check me in","Put me on the 2026 list","Which orgs are involved?"], 760);
+    }
+  },
+
+  /* --- 2026 interest --- */
+  register: {
+    steps: [
+      { key:"role", chips:Object.keys(ROLES),
+        ask:function(){ return '<p>2026 dates aren\'t announced yet, but I keep the list. <b>How are you coming in?</b></p>'; } },
+      { key:"name", ask:function(){ return '<p><b>And your name?</b></p>'; } },
+      { key:"org",  ask:function(){ return '<p><b>Org or role?</b> Say <span class="k">skip</span> if you\'d rather not.</p>'; }, skip:true }
+    ],
+    done: function(S, d){
+      var role = pick(ROLES, d.role) || "Attending";
+      var info = ROLES[role];
+      addGuest(d.name, d.org || info.tag, "On the 2026 list · " + role.toLowerCase());
+      captain(S, '<p><b>You\'re on the list</b> as '+esc(info.noun)+', '+first(d.name)+'.</p>' + info.a +
+              '<p class="k">Prototype note: nothing here reaches a real mailing list yet — the guest book wall is the record.</p>',
+              ["Find my org","Which orgs are involved?","How do I contact them?"], 780);
+    }
+  }
+};
+
+function startFlow(S, name){
+  S.flow = { id:name, i:0, data:{} };
+  var st = FLOWS[name].steps[0];
+  captain(S, st.ask({}), st.chips || []);
+}
+
+function advanceFlow(S, text){
+  var def = FLOWS[S.flow.id];
+  var step = def.steps[S.flow.i];
+  var v = text.trim();
+  if(step.skip && /^(skip|none|n\/a|pass|no)$/i.test(v)) v = "";
+  S.flow.data[step.key] = v.slice(0,110);
+  S.flow.i++;
+  if(S.flow.i < def.steps.length){
+    var next = def.steps[S.flow.i];
+    captain(S, next.ask(S.flow.data), next.chips || []);
+  } else {
+    var d = S.flow.data; S.flow = null;
+    def.done(S, d);
+  }
+}
+
+/* ---------- fixed lines BLAIR speaks (named so the voice
+     manifest can find every one of them) ---------- */
+var SAY = {
+  greeting: '<p><b>Welcome to Black L.A. Tech Week.</b> I\'m BLAIR — the <i>Black LA AI &amp; Intelligence Resource</i>.</p><p>I can walk you through the week, find the org that fits you, or check you in.</p>',
+  hello:    '<p>Welcome in. I\'m BLAIR — I know the week, the twelve orgs, and who to send you to.</p><p>What brings you by?</p>',
+  thanks:   '<p>Anytime. BLAIR is always on.</p>',
+  whatAmI:  '<p>Scripted logic in this prototype — no live model behind me. I only know what\'s published on the site, which is why I say "I don\'t know" instead of inventing an answer.</p><p>In production I\'d be wired to the roles board, the calendar, and the check-in list.</p>',
+  hiring:   '<p>There\'s no roles board on the site, so nothing is posted here.</p><p><a href="https://mybpn.org/losangeles/" target="_blank" rel="noopener">Black Professional Network LA</a> is where LA roles actually circulate, and <a href="http://linkedin.com/company/109058311" target="_blank" rel="noopener">LinkedIn</a> reaches the co-leads.</p>',
+  unknown:  '<p>I don\'t have a good answer for that one — I only speak for what\'s actually published, and I\'d rather say so than guess.</p><p>What I can do:</p><ul><li><b>Find your org</b> — three questions, two or three doors</li><li><b>Check you in</b> — you go on the wall</li><li><b>Put you on the 2026 list</b></li></ul>'
+};
+
+/* =========================================================
+   ROUTER
+   ========================================================= */
+function handle(S, text){
+  text = (text||"").trim();
+  if(!text) return;
+  bubble(S, "you", esc(text));
+
+  if(S.flow){ advanceFlow(S, text); return; }
+
+  var t = norm(text);
+
+  if(/check (me )?in|checkin|check-in|sign (the )?guest|guest ?book|put me on the wall|add me to the wall|sign me/.test(t)){
+    startFlow(S, "checkin"); return;
+  }
+  if(/find my org|match me|which one fits|fits me|org for me|right org for|which org (fits|is right|should)|what org (fits|is right|should)|where do i (fit|start|belong)|recommend an org|help me choose|which night was for me/.test(t)){
+    startFlow(S, "match"); return;
+  }
+  if(/are you (a |an )?(ai|bot|robot|human|real|person|chatbot)/.test(t)){
+    captain(S, SAY.whatAmI, DEFAULT_CHIPS); return;
+  }
+  if(/2026 list|on the list|notify me|let me know when|keep me posted|waitlist|sign me up|register me|rsvp/.test(t)){
+    startFlow(S, "register"); return;
+  }
+  if(/^\s*(hi|hey|hello|yo|sup|good morning|good evening|howdy)\b/.test(t)){
+    captain(S, SAY.hello, DEFAULT_CHIPS); return;
+  }
+  if(/thank|thanks|appreciate|dope|nice|cool|love it|good look/.test(t)){
+    captain(S, SAY.thanks, DEFAULT_CHIPS); return;
+  }
+  if(/i'?m hiring|we'?re hiring|looking to hire|need to hire|post a (job|role)/.test(t)){
+    captain(S, SAY.hiring, ["Put me on the 2026 list","Find my org"]); return;
+  }
+
+  var hit = match(text);
+  if(hit){ captain(S, hit.a, hit.c); return; }
+
+  captain(S, SAY.unknown, ["Find my org","Put me on the 2026 list","What is Black LA Tech Week?","When is it?"]);
+}
+
+document.getElementById("ask").addEventListener("submit", function(e){
+  e.preventDefault();
+  var v = PANEL.input.value; PANEL.input.value = "";
+  handle(PANEL, v);
+});
+
+bubble(PANEL, "cap", SAY.greeting);
+setChips(PANEL, DEFAULT_CHIPS);
+bubble(ORB, "cap", SAY.greeting);
+setChips(ORB, ORB_CHIPS);
+
+/* =========================================================
+   GUEST BOOK
+   ========================================================= */
+var wall = document.getElementById("wall");
+var wallEmpty = document.getElementById("wall-empty");
+var ciNote = document.getElementById("ci-note");
+
+function syncEmpty(){ wallEmpty.style.display = wall.children.length ? "none" : "block"; }
+
+function addGuest(name, org, work){
+  var li = document.createElement("li");
+  li.innerHTML = '<div class="gn"></div><div class="go2"></div><div class="gw"></div>';
+  li.querySelector(".gn").textContent = name;
+  li.querySelector(".go2").textContent = org;
+  var gw = li.querySelector(".gw");
+  if(work){ gw.textContent = work; } else { gw.remove(); }
+  wall.appendChild(li);
+  syncEmpty();
+  return li;
+}
+
+var checkinForm = document.getElementById("checkin-form");
+checkinForm.addEventListener("submit", function(e){
+  e.preventDefault();
+  /* Post to Netlify Forms without leaving the page, so the wall and the
+     Captain still behave the way they always have. A failed post never
+     costs the visitor what they typed. */
+  try{
+    fetch("/", { method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(new FormData(checkinForm)).toString()
+    }).catch(function(){});
+  }catch(err){}
+  var n=document.getElementById("ci-name").value.trim();
+  var o=document.getElementById("ci-org").value.trim();
+  var w=document.getElementById("ci-work").value.trim();
+  if(!n || !o) return;
+  var li = addGuest(n,o,w);
+  ["ci-name","ci-org","ci-work","ci-email"].forEach(function(id){ document.getElementById(id).value=""; });
+  li.scrollIntoView({block:"center"});
+  bubble(PANEL, "cap", '<p><b>'+esc(n.split(" ")[0])+'</b> checked in at the guest book. Welcome in.</p>');
+  setChips(PANEL, DEFAULT_CHIPS);
+});
+
+syncEmpty();
+
+(async function(){
+  try{
+    var art = window.claude && window.claude.use ? await window.claude.use("artifact") : null;
+    if(!art){
+      ciNote.textContent = "Name, org and your one line appear on the public wall. Your email goes to the organizers only.";
+    }
+  }catch(err){}
+})();
+
+
+/* =========================================================
+   BLAIR — dock, voice, mic
+   ========================================================= */
+var dock = document.getElementById("dock");
+var panel = document.getElementById("panel");
+var launcher = document.getElementById("launcher");
+var voiceBtn = document.getElementById("voice");
+var micBtn = document.getElementById("mic");
+var VOICE_KEY = "blatw.blair.voice";
+var VOICE_MAP = window.BLAIR_VOICE_MAP || {};
+var voiceOn = false;
+var speechOK = typeof window.speechSynthesis !== "undefined" && typeof window.SpeechSynthesisUtterance !== "undefined";
+var player = null;
+
+function plain(html){
+  var d = document.createElement("div"); d.innerHTML = html;
+  return (d.textContent || "").replace(/\s+/g, " ").trim();
+}
+/* Stable key for a spoken line. The offline ElevenLabs build hashes the
+   same way, so changing BLAIR's copy simply falls back to synthesis
+   until that line is re-recorded. */
+function vkey(t){
+  var h = 5381;
+  for(var i=0;i<t.length;i++){ h = ((h<<5) + h + t.charCodeAt(i)) >>> 0; }
+  return "b" + h.toString(36);
+}
+function markSource(kind){
+  var el = document.getElementById("vsrc");
+  if(!el) return;
+  el.hidden = !voiceOn;
+  var v = (typeof picked !== "undefined" && picked) ? picked.name : null;
+  el.textContent = kind === "recorded" ? " · recorded voice"
+                 : kind === "live"     ? " · generated live"
+                 : (v ? " · " + v : " · synthesized");
+  el.dataset.kind = kind;
+}
+/* ---- orbs react to her voice ---- */
+var orbs = [];
+var speakingSurface = null;
+function orbEls(){
+  var o = speakingSurface && speakingSurface.orb ? [speakingSurface.orb] : null;
+  if(o) return o;
+  if(!orbs.length) orbs = [document.querySelector(".orb"), document.querySelector(".launch-orb")].filter(Boolean);
+  return orbs;
+}
+function setSpeaking(on){
+  if(!on){
+    [document.querySelector(".orb"), document.querySelector(".launch-orb")]
+      .forEach(function(o){ if(o) o.classList.remove("speaking"); });
+  } else {
+    orbEls().forEach(function(o){ o.classList.add("speaking"); });
+  }
+  if(!on){
+    document.documentElement.style.setProperty("--blair-level", 0);
+    if(levelRaf){ cancelAnimationFrame(levelRaf); levelRaf = null; }
+    if(fakeTimer){ clearInterval(fakeTimer); fakeTimer = null; }
+  }
+}
+
+var actx = null, analyser = null, levelData = null, levelRaf = null, fakeTimer = null;
+
+/* Real amplitude for recorded / ElevenLabs audio. */
+function meter(el){
+  try{
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if(!AC) return false;
+    actx = actx || new AC();
+    if(actx.state === "suspended") actx.resume();
+    var src = actx.createMediaElementSource(el);
+    analyser = actx.createAnalyser();
+    analyser.fftSize = 256;
+    analyser.smoothingTimeConstant = 0.75;
+    levelData = new Uint8Array(analyser.frequencyBinCount);
+    src.connect(analyser); analyser.connect(actx.destination);
+    (function tick(){
+      if(!analyser) return;
+      analyser.getByteFrequencyData(levelData);
+      var sum = 0;
+      for(var i=0;i<levelData.length;i++) sum += levelData[i];
+      var v = Math.min(1, (sum / levelData.length) / 90);
+      document.documentElement.style.setProperty("--blair-level", v.toFixed(3));
+      levelRaf = requestAnimationFrame(tick);
+    })();
+    return true;
+  }catch(e){ return false; }
+}
+
+/* speechSynthesis exposes no audio node, so the ring breathes on a timer
+   instead of pretending to measure something it cannot see. */
+function fakeLevel(){
+  if(fakeTimer) clearInterval(fakeTimer);
+  var t = 0;
+  fakeTimer = setInterval(function(){
+    t += 0.35;
+    var v = 0.34 + Math.abs(Math.sin(t)) * 0.4 + Math.random() * 0.12;
+    document.documentElement.style.setProperty("--blair-level", Math.min(1, v).toFixed(3));
+  }, 110);
+}
+
+/* Browsers refuse audio that was not started by a gesture. A captain whose
+   first sound arrives after a fetch never unlocks, and silently falls back to
+   the robot synth. One silent play on the first click/keypress fixes it. */
+var audioUnlocked = false;
+function unlockAudio(){
+  if(audioUnlocked) return;
+  audioUnlocked = true;
+  try{
+    var a = new Audio("data:audio/mpeg;base64,//uQxAAAAAAAAAAAAAAAAAAAAAAAWGluZwAAAA8AAAACAAACcQCA");
+    a.volume = 0;
+    var pr = a.play();
+    if(pr && pr.catch) pr.catch(function(){});
+  }catch(e){}
+  try{
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if(AC){ actx = actx || new AC(); if(actx.state === "suspended") actx.resume(); }
+  }catch(e){}
+}
+["click","keydown","touchstart"].forEach(function(ev){
+  document.addEventListener(ev, unlockAudio, { once:false, passive:true, capture:true });
+});
+
+function stopSpeaking(){
+  try{ if(player){ player.pause(); player = null; } }catch(e){}
+  try{ if(speechOK) window.speechSynthesis.cancel(); }catch(e){}
+  if(analyser){ try{ analyser.disconnect(); }catch(e){} analyser = null; }
+  if(wordRaf){ cancelAnimationFrame(wordRaf); wordRaf = null; }
+  setSpeaking(false);
+}
+var picked = null;
+
+/* macOS ships genuinely good voices; the default is rarely one of them.
+   Prefer premium/enhanced first, then the best standard names, then any
+   English voice, and only then whatever the browser hands us. */
+var VOICE_RANK = [
+  "Samantha","Ava","Allison","Susan","Zoe","Nicky","Karen","Moira","Tessa","Serena",
+  "Google US English","Microsoft Aria","Microsoft Jenny","Microsoft Michelle","Zira"
+];
+function scoreVoice(v){
+  var n = (v.name || ""), lower = n.toLowerCase(), sc = 0;
+  if(/premium|enhanced|siri/i.test(n)) sc += 60;          // the good downloads
+  if(/^en[-_]us/i.test(v.lang || "")) sc += 20;
+  else if(/^en/i.test(v.lang || "")) sc += 10;
+  if(v.localService) sc += 8;                              // no network hiccup mid-demo
+  for(var i=0;i<VOICE_RANK.length;i++){
+    if(lower.indexOf(VOICE_RANK[i].toLowerCase()) > -1){ sc += (VOICE_RANK.length - i) * 3; break; }
+  }
+  if(/compact|novelty|whisper|bells|bubbles|organ|zarvox|trinoids|boing/i.test(lower)) sc -= 80;
+  return sc;
+}
+function bestVoice(){
+  if(picked) return picked;
+  var vs = [];
+  try{ vs = window.speechSynthesis.getVoices() || []; }catch(e){ return null; }
+  if(!vs.length) return null;
+  var best = null, bestScore = -1e9;
+  for(var i=0;i<vs.length;i++){
+    var sc = scoreVoice(vs[i]);
+    if(sc > bestScore){ bestScore = sc; best = vs[i]; }
+  }
+  picked = best;
+  return picked;
+}
+if(typeof window.speechSynthesis !== "undefined"){
+  try{ window.speechSynthesis.onvoiceschanged = function(){ picked = null; bestVoice(); }; }catch(e){}
+}
+
+/* Written text and spoken text are not the same thing. Strip what should
+   never be read aloud, and spell out what a screen reader would fumble. */
+function forSpeech(text){
+  return text
+    .replace(/https?:\/\/\S+/g, "")
+    .replace(/\*\*|__|`|#{1,6}\s*/g, "")
+    .replace(/^\s*[-•▸*]\s*/gm, "")
+    .replace(/\s*→\s*/g, ". ")
+    .replace(/\bL\.A\./g, "L A")
+    .replace(/\bBLATW\b/g, "B L A T W")
+    .replace(/\bBLAIR\b/g, "Blair")
+    .replace(/\bNSBE\b/g, "N S B E")
+    .replace(/\bIT\b/g, "I T")
+    .replace(/\bAI\b/g, "A I")
+    .replace(/2,000\+/g, "over two thousand")
+    .replace(/(\d)\s*[–-]\s*(\d+)\s*(AM|PM)/gi, "$1 to $2 $3")
+    .replace(/\bOct\b/g, "October")
+    .replace(/\bMon\b/g, "Monday").replace(/\bTue\b/g, "Tuesday")
+    .replace(/\bWed\b/g, "Wednesday").replace(/\bThu\b/g, "Thursday")
+    .replace(/\s*·\s*/g, ", ")
+    .replace(/\s*&\s*/g, " and ")
+    .replace(/\s{2,}/g, " ")
+    .trim();
+}
+
+/* One utterance per sentence, so she breathes instead of racing. */
+function synth(text){
+  if(!speechOK) return;
+  var clean = forSpeech(text);
+  if(!clean) return;
+  var parts = clean.match(/[^.!?]+[.!?]*/g) || [clean];
+  var v = bestVoice();
+  var started = false;
+
+  /* how far into the whole answer each sentence begins, so boundary
+     events inside a sentence can be expressed as one overall fraction */
+  var lens = parts.map(function(s){ return s.length; });
+  var total = lens.reduce(function(a, b){ return a + b; }, 0) || 1;
+  var before = []; lens.reduce(function(a, l, i){ before[i] = a; return a + l; }, 0);
+
+  parts.forEach(function(part, i){
+    var t = part.trim();
+    if(!t) return;
+    try{
+      var u = new SpeechSynthesisUtterance(t);
+      if(v) u.voice = v;
+      u.rate = 0.97; u.pitch = 1.0; u.volume = 1;
+      u.onboundary = function(ev){
+        markProgress((before[i] + (ev.charIndex || 0)) / total);
+      };
+      if(!started){ started = true; u.onstart = function(){ setSpeaking(true); fakeLevel(); }; }
+      if(i === parts.length - 1) u.onend = u.onerror = function(){ setSpeaking(false); finishWords(); };
+      window.speechSynthesis.speak(u);
+    }catch(e){}
+  });
+}
+
+/* =========================================================
+   SPOKEN-WORD HIGHLIGHT
+   Wraps the words of the bubble she is reading, then lights
+   them in time with her. Timing comes from whatever source is
+   actually speaking: the audio element's own clock for real
+   speech, and boundary events for browser synthesis. Both are
+   reduced to one fraction 0..1, so a mismatch between written
+   and spoken wording can never drift the highlight.
+   ========================================================= */
+var wordSpans = [], wordEnds = [], wordBubble = null, wordRaf = null, wordIdx = -1;
+
+function clearWords(){
+  if(wordRaf){ cancelAnimationFrame(wordRaf); wordRaf = null; }
+  if(wordBubble){
+    Array.prototype.forEach.call(wordBubble.querySelectorAll(".w"), function(s){
+      s.classList.remove("on"); s.classList.remove("said");
+    });
+  }
+  wordSpans = []; wordEnds = []; wordBubble = null; wordIdx = -1;
+}
+
+/* Wrap every word in its own span without disturbing links, lists or
+   emphasis — only text nodes are touched. */
+function prepareWords(bub){
+  clearWords();
+  if(!bub) return;
+  var walker = document.createTreeWalker(bub, NodeFilter.SHOW_TEXT, null);
+  var nodes = [], n;
+  while((n = walker.nextNode())) if(n.nodeValue && /\S/.test(n.nodeValue)) nodes.push(n);
+
+  nodes.forEach(function(node){
+    var frag = document.createDocumentFragment();
+    node.nodeValue.split(/(\s+)/).forEach(function(part){
+      if(!part) return;
+      if(/^\s+$/.test(part)){ frag.appendChild(document.createTextNode(part)); return; }
+      var s = document.createElement("span");
+      s.className = "w"; s.textContent = part;
+      frag.appendChild(s);
+    });
+    node.parentNode.replaceChild(frag, node);
+  });
+
+  wordBubble = bub;
+  wordSpans = Array.prototype.slice.call(bub.querySelectorAll(".w"));
+  /* longer words hold the highlight longer */
+  var total = 0, running = [];
+  wordSpans.forEach(function(s){ total += s.textContent.length + 1; running.push(total); });
+  wordEnds = running.map(function(v){ return total ? v / total : 0; });
+}
+
+/* Move the highlight to whatever word this fraction of the way through
+   the utterance lands on. */
+function markProgress(f){
+  if(!wordSpans.length) return;
+  f = Math.max(0, Math.min(1, f));
+  var i = 0;
+  while(i < wordEnds.length - 1 && wordEnds[i] < f) i++;
+  if(i === wordIdx) return;
+  for(var k = 0; k < wordSpans.length; k++){
+    var s = wordSpans[k];
+    if(k < i){ s.classList.add("said"); s.classList.remove("on"); }
+    else if(k === i){ s.classList.add("on"); s.classList.remove("said"); }
+    else { s.classList.remove("on"); s.classList.remove("said"); }
+  }
+  wordIdx = i;
+}
+
+/* Audio knows exactly how long it is, so follow its own clock. */
+function followAudio(el){
+  if(wordRaf) cancelAnimationFrame(wordRaf);
+  (function tick(){
+    if(!el || el.paused || !wordSpans.length) return;
+    var d = el.duration;
+    if(d && isFinite(d) && d > 0) markProgress(el.currentTime / d);
+    wordRaf = requestAnimationFrame(tick);
+  })();
+}
+
+function finishWords(){
+  if(wordRaf){ cancelAnimationFrame(wordRaf); wordRaf = null; }
+  wordSpans.forEach(function(s){ s.classList.add("said"); s.classList.remove("on"); });
+  wordIdx = wordSpans.length;
+}
+
+function speak(html, S, bub){
+  speakingSurface = S || PANEL;
+  if(!voiceOn) return;
+  var text = plain(html);
+  if(!text) return;
+  stopSpeaking();
+  prepareWords(bub);
+  var src = VOICE_MAP[vkey(text)];
+  if(src){ play(src, text, "recorded"); return; }
+  if(window.BLAIR_LIVE_VOICE){ live(text); return; }
+  synth(text);
+  markSource("synth");
+}
+
+function play(src, text, kind){
+  try{
+    player = new Audio(src);
+    player.crossOrigin = "anonymous";
+    player.addEventListener("ended", function(){ setSpeaking(false); finishWords(); });
+    player.addEventListener("pause", function(){ setSpeaking(false); });
+    player.addEventListener("playing", function(){ followAudio(player); });
+    var pr = player.play();
+    if(pr && pr.then){
+      pr.then(function(){
+        setSpeaking(true);
+        followAudio(player);
+        if(!meter(player)) fakeLevel();
+      }).catch(function(){ synth(text); markSource("synth"); });
+    } else {
+      setSpeaking(true); followAudio(player); if(!meter(player)) fakeLevel();
+    }
+    markSource(kind);
+  }catch(e){ synth(text); markSource("synth"); }
+}
+
+/* Live ElevenLabs, via the Netlify function that holds the key server-side.
+   Off unless window.BLAIR_LIVE_VOICE is set — the recorded map is cheaper,
+   faster and does not bill per visitor. */
+/* Two endpoints, tried in order: BLATW's own function first, then the
+   fallback that is already keyed. While BLATW has no ELEVENLABS_API_KEY of
+   its own, /api/speak answers 503 and the fallback carries her — so she
+   never drops to the robot voice. The day that key is set, the first
+   endpoint starts answering and she switches to BLATW's own voice and
+   BLATW's own bill with no code change. Whichever answered is remembered
+   for the session so only the first line ever pays for the probe. */
+var speakEndpoint = null;
+function speakUrls(){
+  var list = [];
+  if(window.BLAIR_SPEAK_URL) list.push(window.BLAIR_SPEAK_URL);
+  if(window.BLAIR_SPEAK_FALLBACK_URL) list.push(window.BLAIR_SPEAK_FALLBACK_URL);
+  return list.length ? list : ["/api/speak"];
+}
+
+function live(text){
+  markSource("live");
+  var body = JSON.stringify({ text: forSpeech(text), captain: "BLAIR" });
+  var urls = speakEndpoint ? [speakEndpoint] : speakUrls();
+
+  (function attempt(i){
+    if(i >= urls.length){ synth(text); markSource("synth"); return; }
+    fetch(urls[i], {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: body
+    }).then(function(r){
+      if(!r.ok) throw new Error(r.status);
+      return r.blob();
+    }).then(function(blob){
+      speakEndpoint = urls[i];
+      play(URL.createObjectURL(blob), text, "live");
+    }).catch(function(){
+      attempt(i + 1);
+    });
+  })(0);
+}
+
+function setVoice(on){
+  voiceOn = !!on && speechOK;
+  voiceBtn.setAttribute("aria-pressed", voiceOn ? "true" : "false");
+  /* muting mid-sentence should take the lit word with it */
+  if(!voiceOn){ stopSpeaking(); clearWords(); }
+  var el = document.getElementById("vsrc"); if(el) el.hidden = !voiceOn;
+  try{ localStorage.setItem(VOICE_KEY, voiceOn ? "1" : "0"); }catch(e){}
+  var sp = document.getElementById("orb-speaker");
+  if(sp) sp.setAttribute("aria-pressed", voiceOn ? "true" : "false");
+}
+if(!speechOK){ voiceBtn.hidden = true; }
+else {
+  try{ if(localStorage.getItem(VOICE_KEY) === "1") setVoice(true); }catch(e){}
+  voiceBtn.addEventListener("click", function(){ setVoice(!voiceOn); });
+}
+
+function openBlair(focus){
+  panel.hidden = false;
+  launcher.setAttribute("aria-expanded","true");
+  if(focus !== false) PANEL.input.focus();
+  PANEL.log.scrollTop = PANEL.log.scrollHeight;
+}
+function closeBlair(){
+  panel.hidden = true;
+  launcher.setAttribute("aria-expanded","false");
+  stopSpeaking();
+}
+launcher.addEventListener("click", function(){ panel.hidden ? openBlair() : closeBlair(); });
+document.getElementById("closep").addEventListener("click", closeBlair);
+document.getElementById("expand").addEventListener("click", function(){
+  dock.dataset.size = dock.dataset.size === "big" ? "small" : "big";
+  PANEL.log.scrollTop = PANEL.log.scrollHeight;
+});
+document.addEventListener("keydown", function(e){ if(e.key === "Escape" && !panel.hidden) closeBlair(); });
+
+/* the orb's own ask box — same engine, answers land in her panel */
+/* The orb's whole job is to be heard. Tapping it turns her voice on and
+   plays her greeting — no transcript, no panel. */
+var orbHear = document.getElementById("orb-hear");
+if(orbHear){
+  orbHear.addEventListener("click", function(){
+    if(!voiceOn) setVoice(true);
+    stopSpeaking();
+    speak(SAY.greeting, ORB);
+  });
+}
+
+/* Her page exists to be heard, so it opens audible unless this visitor has
+   said otherwise. Their click on the tab is the gesture that unlocks audio,
+   so the first answer actually plays instead of being blocked. */
+var orbSpeaker = document.getElementById("orb-speaker");
+function syncSpeaker(){
+  if(orbSpeaker) orbSpeaker.setAttribute("aria-pressed", voiceOn ? "true" : "false");
+}
+if(orbSpeaker){
+  orbSpeaker.addEventListener("click", function(){ setVoice(!voiceOn); syncSpeaker(); });
+}
+(function(){
+  var stored = null;
+  try{ stored = localStorage.getItem(VOICE_KEY); }catch(e){}
+  function openedHerPage(){
+    if(stored === "0") { syncSpeaker(); return; }   // they muted her before
+    if(!voiceOn) setVoice(true);
+    syncSpeaker();
+  }
+  if(location.hash === "#blair" || location.hash === "#captain") openedHerPage();
+  window.addEventListener("hashchange", function(){
+    if(location.hash === "#blair" || location.hash === "#captain") openedHerPage();
+  });
+})();
+
+var orbForm = document.getElementById("orb-ask");
+if(orbForm){
+  orbForm.addEventListener("submit", function(e){
+    e.preventDefault();
+    var v = ORB.input.value.trim();
+    ORB.input.value = "";
+    if(v) handle(ORB, v);
+  });
+}
+
+/* mic on the intro bar, where the browser supports it */
+var SR2 = window.SpeechRecognition || window.webkitSpeechRecognition;
+var orbMic = document.getElementById("orb-mic");
+if(orbMic){
+  if(!SR2){ orbMic.hidden = true; }
+  else {
+    var rec2 = null, listening2 = false;
+    orbMic.addEventListener("click", function(){
+      if(listening2){ try{ rec2.stop(); }catch(e){} return; }
+      try{
+        rec2 = new SR2();
+        rec2.lang = "en-US"; rec2.interimResults = false; rec2.maxAlternatives = 1;
+        rec2.onstart = function(){ listening2 = true; orbMic.classList.add("rec"); };
+        rec2.onend   = function(){ listening2 = false; orbMic.classList.remove("rec"); };
+        rec2.onerror = function(){ listening2 = false; orbMic.classList.remove("rec"); ORB.input.placeholder = "Voice input unavailable here — type instead."; };
+        rec2.onresult = function(ev){
+          var t = ev.results && ev.results[0] && ev.results[0][0] && ev.results[0][0].transcript;
+          if(t) handle(ORB, t);
+        };
+        rec2.start();
+      }catch(e){ orbMic.hidden = true; }
+    });
+  }
+}
+
+/* anything marked data-open-blair opens her */
+Array.prototype.forEach.call(document.querySelectorAll("[data-open-blair]"), function(el){
+  el.addEventListener("click", function(){ openBlair(); });
+});
+var navAsk = document.getElementById("nav-ask");
+if(navAsk) navAsk.addEventListener("click", function(){ openBlair(); });
+
+/* =========================================================
+   VIEWS — one document, two tabs. Works the same in the
+   single-file artifact as it does on the deployed site.
+   ========================================================= */
+(function(){
+  var views = { home:  document.getElementById("view-home"),
+                about: document.getElementById("view-about"),
+                blair: document.getElementById("view-blair") };
+  if(!views.home || !views.about || !views.blair) return;
+  var links = document.querySelectorAll("nav.main a[data-nav]");
+
+  function show(name, hash){
+    var target = views[name] ? name : "home";
+    Object.keys(views).forEach(function(k){ views[k].hidden = k !== target; });
+    Array.prototype.forEach.call(links, function(a){
+      if(a.getAttribute("data-nav") === target) a.setAttribute("aria-current","page");
+      else a.removeAttribute("aria-current");
+    });
+    if(hash){
+      var el = document.querySelector(hash);
+      if(el && el.scrollIntoView){ el.scrollIntoView({behavior:"smooth", block:"start"}); return; }
+    }
+    window.scrollTo({top:0, behavior:"auto"});
+  }
+
+  function focusAsk(){
+    var i = document.getElementById("orb-input");
+    if(i) setTimeout(function(){ try{ i.focus({preventScroll:true}); }catch(e){ i.focus(); } }, 120);
+  }
+
+  function route(){
+    var h = location.hash || "";
+    if(h === "#about"){ show("about"); return; }
+    if(h === "#blair" || h === "#captain"){ show("blair"); focusAsk(); return; }
+    /* a hash that lives on another tab should switch to it, not fall through */
+    var owner = null;
+    Object.keys(views).forEach(function(k){
+      if(!owner && k !== "home" && h && views[k].querySelector(h)) owner = k;
+    });
+    show(owner || "home", h && document.querySelector(h) ? h : null);
+  }
+
+  Array.prototype.forEach.call(links, function(a){
+    a.addEventListener("click", function(e){
+      var h = a.getAttribute("href");
+      e.preventDefault();
+      if(location.hash === h) route(); else location.hash = h;
+    });
+  });
+  window.addEventListener("hashchange", route);
+  route();
+
+  /* BLAIR's own links point at things that may sit on either tab */
+  document.addEventListener("click", function(e){
+    var a = e.target.closest && e.target.closest('a[href^="#"]');
+    if(!a) return;
+    var h = a.getAttribute("href");
+    if(h.length < 2) return;
+    var owner = null;
+    Object.keys(views).forEach(function(k){
+      if(!owner && k !== "home" && views[k].querySelector(h)) owner = k;
+    });
+    if(owner){ e.preventDefault(); location.hash = owner === "about" ? "#about" : "#blair";
+      setTimeout(function(){
+        var el = document.querySelector(h); if(el) el.scrollIntoView({behavior:"smooth"});
+      }, 60); }
+  });
+})();
+
+/* Partner logos, same source as the org wall. */
+Array.prototype.forEach.call(document.querySelectorAll(".partner b[data-logo]"), function(b){
+  var src = (window.BLAIR_LOGOS || {})[b.getAttribute("data-logo")];
+  if(!src) return;
+  var img = new Image();
+  img.src = src; img.alt = b.textContent; img.loading = "lazy";
+  b.parentNode.insertBefore(img, b);
+  b.hidden = true;
+});
+
+/* The impact numbers count up the first time they scroll into view.
+   The real figures are in the markup, so if this never runs — no JS, no
+   IntersectionObserver, reduced motion — the section still reads correctly. */
+(function(){
+  var nums = document.querySelectorAll(".impact-nums .num");
+  if(!nums.length) return;
+
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if(reduce) return;
+
+  function render(el, v, suffix){
+    el.textContent = Math.round(v).toLocaleString("en-US") + suffix;
+  }
+
+  function run(el){
+    var to = parseFloat(el.getAttribute("data-to")) || 0;
+    var suffix = el.getAttribute("data-suffix") || "";
+    var dur = 1500, t0 = null;
+    render(el, 0, suffix);
+    function step(ts){
+      if(t0 === null) t0 = ts;
+      var p = Math.min(1, (ts - t0) / dur);
+      render(el, to * (1 - Math.pow(1 - p, 3)), suffix);   // ease-out cubic
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  if(!("IntersectionObserver" in window)) return;          // leave the real numbers
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(!en.isIntersecting) return;
+      io.unobserve(en.target);
+      run(en.target);
+    });
+  }, { threshold:0.45 });
+  Array.prototype.forEach.call(nums, function(el){ io.observe(el); });
+})();
+
+/* Hero: hold the still, then bring the motion cut in over it. Only loads
+   the video once we actually intend to play it. */
+(function(){
+  var v = document.getElementById("hero-vid");
+  if(!v) return;
+  if(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var started = false;
+  function go(){
+    if(started) return; started = true;
+    v.preload = "auto";
+    v.load();
+    var p = v.play();
+    if(p && p.catch) p.catch(function(){ /* autoplay refused — the still stays */ });
+    v.addEventListener("playing", function(){ v.classList.add("on"); }, { once:true });
+  }
+  setTimeout(go, 3200);
+  document.addEventListener("visibilitychange", function(){
+    if(document.hidden){ try{ v.pause(); }catch(e){} }
+    else if(started){ try{ v.play(); }catch(e){} }
+  });
+})();
+
+/* voice-map.json lets new recordings ship without rebuilding the page.
+   Harmless where the file doesn't exist (single-file artifact). */
+try{
+  fetch("voice-map.json", { cache: "no-cache" })
+    .then(function(r){ return r.ok ? r.json() : null; })
+    .then(function(m){ if(m && typeof m === "object") Object.assign(VOICE_MAP, m); })
+    .catch(function(){});
+}catch(e){}
+
+/* mic — only offered where the browser actually supports it */
+var SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+if(SR){
+  micBtn.hidden = false;
+  var rec = null, listening = false;
+  micBtn.addEventListener("click", function(){
+    if(listening){ try{ rec.stop(); }catch(e){} return; }
+    try{
+      rec = new SR();
+      rec.lang = "en-US"; rec.interimResults = false; rec.maxAlternatives = 1;
+      rec.onstart = function(){ listening = true; micBtn.classList.add("rec"); };
+      rec.onend = function(){ listening = false; micBtn.classList.remove("rec"); };
+      rec.onerror = function(){
+        listening = false; micBtn.classList.remove("rec");
+        document.getElementById("prov").textContent = "Voice input isn't available in this view — type instead.";
+      };
+      rec.onresult = function(ev){
+        var t = ev.results && ev.results[0] && ev.results[0][0] && ev.results[0][0].transcript;
+        if(t) handle(PANEL, t);
+      };
+      rec.start();
+    }catch(e){ micBtn.hidden = true; }
+  });
+}
+
+
+/* =========================================================
+   VOICE MANIFEST — every line BLAIR can say, with the key the
+   ElevenLabs build writes audio against. Read it in a browser
+   console with: copy(JSON.stringify(BLAIR_VOICE_LINES,null,2))
+   ========================================================= */
+window.BLAIR_VOICE_LINES = (function(){
+  var out = [], seen = {};
+  function add(html, kind, dynamic){
+    var text = plain(html);
+    if(!text || seen[text]) return;
+    seen[text] = 1;
+    out.push({ key: dynamic ? null : vkey(text), text: text, kind: kind, dynamic: !!dynamic });
+  }
+  Object.keys(SAY).forEach(function(k){ add(SAY[k], "line:" + k); });
+  KB.forEach(function(e){ add(e.a, "answer:" + e.id); });
+  Object.keys(FLOWS).forEach(function(f){
+    FLOWS[f].steps.forEach(function(st, i){
+      var a = plain(st.ask({ name:"Alpha Bravo", org:"Org One" }));
+      var b = plain(st.ask({ name:"Charlie Delta", org:"Org Two" }));
+      add(a, "flow:" + f + ":" + st.key, a !== b);
+    });
+  });
+  return out;
+})();
+
+})();
+</script>
+</body>
+</html>

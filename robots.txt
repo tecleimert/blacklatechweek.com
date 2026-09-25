@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /dropin/
+
+Sitemap: https://www.blacklatechweek.com/sitemap.xml
