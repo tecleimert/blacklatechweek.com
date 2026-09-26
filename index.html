@@ -6,7 +6,7 @@
 <meta name="color-scheme" content="dark">
 <meta name="description" content="Black L.A. Tech Week — an annual convening of thought leaders, founders, professionals and entrepreneurs across technology and the creative economy, held alongside LA Tech Week. October 12–18, 2026 in Los Angeles.">
 <meta property="og:title" content="Black L.A. Tech Week — Oct 12–18, 2026">
-<meta property="og:description" content="Sixteen events across one week in Los Angeles. Meet the twelve orgs, browse the week, and RSVP.">
+<meta property="og:description" content="Twenty-three events across one week in Los Angeles. Meet the twelve orgs, browse the week, and RSVP.">
 <meta property="og:image" content="https://www.blacklatechweek.com/assets/og.jpg">
 <meta property="og:url" content="https://www.blacklatechweek.com/">
 <meta property="og:site_name" content="Black L.A. Tech Week">
@@ -244,6 +244,10 @@ nav.main a.nav-ask[aria-current="page"]{background:var(--violet);color:#fff}
    own column count so the last row never strands a single tile */
 .days-14{grid-template-columns:repeat(auto-fill,minmax(232px,1fr))}
 @media(min-width:840px){.days-14{grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}}
+/* The grid draws its dividing lines with 1px gaps over a --line background, so
+   an empty trailing cell shows up as a pale phantom tile. When the event count
+   doesn't divide evenly into the column count, pad the last row out. */
+.day-filler{pointer-events:none}
 a.day{text-decoration:none;color:inherit}
 a.day:hover{background:var(--panel-2)}
 a.day:focus-visible{outline:2px solid var(--violet);outline-offset:-2px}
@@ -794,46 +798,70 @@ footer{border-top:1px solid var(--line);padding-block:2.8rem 3.6rem;background:v
   <h2 class="big">Los Angeles Takeover.</h2>
   <p class="lede">Check out our list for the week, or tap <button type="button" class="inline-blair" data-open-blair>BLAIR</button> to help you RSVP for the events you want to attend.</p>
   <div class="days days-14">
+    <a class="day" href="https://partiful.com/e/Zn3qZPLCiln927f34D4d" target="_blank" rel="noopener">
+      <span class="n">SUN · OCT 11</span>
+      <h3>Family STEM Day 1</h3>
+      <span class="when">2:00 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
     <a class="day" href="https://partiful.com/e/stWDAXCuaf7y7eaUdFik" target="_blank" rel="noopener">
       <span class="n">MON · OCT 12</span>
-      <h3>Masterclass: Immersive Storyworld Building & AI Animation</h3>
-      <span class="when">11:00 AM · LDU</span>
+      <h3>Masterclass: Immersive Storyworld Building &amp; AI Animation</h3>
+      <span class="when">3:00 PM · LDU</span>
       <span class="rsvp">RSVP on Partiful →</span>
     </a>
     <a class="day" href="https://partiful.com/e/cHx0gJyRlzxCPa28SrEt" target="_blank" rel="noopener">
       <span class="n">MON · OCT 12</span>
       <h3>The New Beauty Counter: Wellness + Beauty Tech</h3>
-      <span class="when">6:00 PM · Venue TBA</span>
+      <span class="when">4:00 PM · Fr3e Space LA</span>
       <span class="rsvp">RSVP on Partiful →</span>
     </a>
     <a class="day" href="https://partiful.com/e/Aqo3myC81kLLAPFIf8IE" target="_blank" rel="noopener">
       <span class="n">MON · OCT 12</span>
       <h3>Black LA Tech Week Mixer</h3>
-      <span class="when">6:30 PM · TBD</span>
+      <span class="when">6:30 PM · Fr3e Space LA</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/2t25GwU3w8JvnNhkH6yC" target="_blank" rel="noopener">
+      <span class="n">TUE · OCT 13</span>
+      <h3>Beyond The Counter</h3>
+      <span class="when">12:00 PM · West Hollywood</span>
       <span class="rsvp">RSVP on Partiful →</span>
     </a>
     <a class="day" href="https://partiful.com/e/H1tqHcveViy0WaTz5wSc" target="_blank" rel="noopener">
       <span class="n">TUE · OCT 13</span>
       <h3>LDU AI Academy</h3>
-      <span class="when">11:30 AM · LDU</span>
+      <span class="when">1:00 PM · LDU</span>
       <span class="rsvp">RSVP on Partiful →</span>
     </a>
+    <div class="day">
+      <span class="n">TUE · OCT 13</span>
+      <h3>Black Doctor Collective Event</h3>
+      <span class="when">6:00 PM · LDU</span>
+      <span class="note-t">RSVP link to come</span>
+    </div>
     <a class="day" href="https://partiful.com/e/2euWvYm12xlYZ6Zzbgze" target="_blank" rel="noopener">
       <span class="n">TUE · OCT 13</span>
-      <h3>Engineering The Future</h3>
-      <span class="when">6:30 PM · LDU</span>
-      <span class="rsvp">RSVP on Partiful →</span>
-    </a>
-    <a class="day" href="https://partiful.com/e/2t25GwU3w8JvnNhkH6yC" target="_blank" rel="noopener">
-      <span class="n">TUE · OCT 13</span>
-      <h3>BEYOND THE COUNTER</h3>
-      <span class="when">Time TBA · Venue TBA</span>
+      <h3>Engineering The Future (NSBE x Closed Loop x TCLA)</h3>
+      <span class="when">6:30 PM · Google Next Center</span>
       <span class="rsvp">RSVP on Partiful →</span>
     </a>
     <a class="day" href="https://partiful.com/e/eubBhAAG0VplDJMZYVKK" target="_blank" rel="noopener">
       <span class="n">WED · OCT 14</span>
       <h3>Co-Work + Coffee</h3>
-      <span class="when">9:30 AM · LDU</span>
+      <span class="when">10:00 AM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/Mb2CCPQ3NL6pguIYaHLY" target="_blank" rel="noopener">
+      <span class="n">WED · OCT 14</span>
+      <h3>Built Fast. Secured Smart. Cybersecurity for the Vibe-Coded Era</h3>
+      <span class="when">6:00 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/sW9uKt7kByEh651OBLUo" target="_blank" rel="noopener">
+      <span class="n">WED · OCT 14</span>
+      <h3>Testify &amp; Pitch</h3>
+      <span class="when">6:00 PM · South LA</span>
       <span class="rsvp">RSVP on Partiful →</span>
     </a>
     <a class="day" href="https://partiful.com/e/3aLkhDtF0RMkQZsrPYrz" target="_blank" rel="noopener">
@@ -842,16 +870,22 @@ footer{border-top:1px solid var(--line);padding-block:2.8rem 3.6rem;background:v
       <span class="when">6:30 PM · LDU</span>
       <span class="rsvp">RSVP on Partiful →</span>
     </a>
-    <a class="day" href="https://partiful.com/e/HezCL7LvoObzaGVxWchS" target="_blank" rel="noopener">
-      <span class="n">WED · OCT 14</span>
-      <h3>BLATW Cybersecurity Panel</h3>
-      <span class="when">7:00 PM · LDU</span>
-      <span class="rsvp">RSVP on Partiful →</span>
-    </a>
     <a class="day" href="https://partiful.com/e/b7f3FnrhOoYW3x5dvqbY" target="_blank" rel="noopener">
       <span class="n">THU · OCT 15</span>
       <h3>AI for Biz Workshop</h3>
-      <span class="when">4:00 PM · Microsoft</span>
+      <span class="when">4:00 PM · Microsoft · Playa Vista</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/jNs8JULhMxmWdE1is8Ym" target="_blank" rel="noopener">
+      <span class="n">THU · OCT 15</span>
+      <h3>Be Playful: Black Public Media Games Showcase</h3>
+      <span class="when">5:00 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/h242EIFbcMvbTIl6bm78" target="_blank" rel="noopener">
+      <span class="n">THU · OCT 15</span>
+      <h3>The Owners Playbook: Storefronts &amp; Startups</h3>
+      <span class="when">5:30 PM · Playa Vista</span>
       <span class="rsvp">RSVP on Partiful →</span>
     </a>
     <a class="day" href="https://partiful.com/e/gzigzgGfGNU4d0kzL71W" target="_blank" rel="noopener">
@@ -860,16 +894,16 @@ footer{border-top:1px solid var(--line);padding-block:2.8rem 3.6rem;background:v
       <span class="when">7:00 PM · LDU</span>
       <span class="rsvp">RSVP on Partiful →</span>
     </a>
-    <a class="day" href="https://partiful.com/e/odbtV4ovwqoeQeLimJ3d" target="_blank" rel="noopener">
-      <span class="n">FRI · OCT 16</span>
-      <h3>Tech Meets Couture</h3>
-      <span class="when">7:00 PM · LDU</span>
-      <span class="rsvp">RSVP on Partiful →</span>
-    </a>
     <a class="day" href="https://partiful.com/e/xH9EECTclaixehbBhvSQ" target="_blank" rel="noopener">
       <span class="n">FRI · OCT 16</span>
-      <h3>AI Music Concert</h3>
-      <span class="when">7:00 PM · LDU</span>
+      <h3>AI Music Experience + OOO Mixer</h3>
+      <span class="when">6:30 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/1bEnEd0iJiIU5SUVwPId" target="_blank" rel="noopener">
+      <span class="n">FRI · OCT 16</span>
+      <h3>Tech + Couture</h3>
+      <span class="when">7:00 PM · Marina Del Rey (TBC)</span>
       <span class="rsvp">RSVP on Partiful →</span>
     </a>
     <a class="day" href="https://partiful.com/e/6WPLziiH1vydNrlTTppI" target="_blank" rel="noopener">
@@ -878,10 +912,22 @@ footer{border-top:1px solid var(--line);padding-block:2.8rem 3.6rem;background:v
       <span class="when">7:00 PM · LDU</span>
       <span class="rsvp">RSVP on Partiful →</span>
     </a>
-    <a class="day" href="https://partiful.com/e/U8IR7lkNIYFRWaVGBiFk" target="_blank" rel="noopener">
+    <a class="day" href="https://gamma.app/docs/3rd-Annual-Venture-on-the-Green-1rv1i9j2abccob5?mode=doc" target="_blank" rel="noopener">
       <span class="n">SAT · OCT 17</span>
-      <h3>LDU Open House Fundraiser</h3>
-      <span class="when">7:00 PM · LDU</span>
+      <h3>Venture on the Green</h3>
+      <span class="when">Time TBA · Maggie Hathaway Golf Course</span>
+      <span class="rsvp">Event details →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/pkXFENlupuZOklPIkZqa" target="_blank" rel="noopener">
+      <span class="n">SAT · OCT 17</span>
+      <h3>Bots, Bytes &amp; Bubbles Benefit</h3>
+      <span class="when">6:00 PM · LDU</span>
+      <span class="rsvp">RSVP on Partiful →</span>
+    </a>
+    <a class="day" href="https://partiful.com/e/ZpOWxjlqy6XCv2pRQiJQ" target="_blank" rel="noopener">
+      <span class="n">SAT · OCT 17</span>
+      <h3>Tech Week After Dark</h3>
+      <span class="when">8:00 PM · Warwick Hollywood</span>
       <span class="rsvp">RSVP on Partiful →</span>
     </a>
     <a class="day" href="https://partiful.com/e/v75ogLCMMekNBnJAF1cP" target="_blank" rel="noopener">
@@ -1254,12 +1300,12 @@ function orgLines(list){
 var KB = [
   { id:"dates",
     k:["when","date","dates","2026","next","happening","time of year","schedule","upcoming"],
-    a:'<p><b>October 12–18, 2026</b> — Monday through Sunday.</p><p>Sixteen events are up with RSVP links, from an 11 AM masterclass on the Monday to Family STEM Day on the Sunday. The full list is under <b>The Week</b>.</p>',
+    a:'<p><b>October 12–18, 2026</b> — Monday through Sunday, with a Family STEM Day the Sunday before.</p><p>Twenty-three events are listed, from a Monday afternoon masterclass to Tech Week After Dark on the Saturday night. The full list is under <b>The Week</b>.</p>',
     c:["What happened in 2025?","Where is it held?","Check me in"] },
 
   { id:"where",
     k:["where","venue","address","location","adams","held","place","neighborhood","west adams"],
-    a:'<p>It moves around — each event carries its own venue. Most of the week sits at <b>LDU</b>, with one at <b>Microsoft</b>.</p><p>The exact address for any event is on its Partiful page; the full list is under <b>The Week</b>.</p>',
+    a:'<p>It moves around — each event carries its own venue. <b>LDU</b> anchors the week, and the rest spread across the city: <b>Fr3e Space LA</b>, <b>Microsoft in Playa Vista</b>, the <b>Google Next Center</b>, West Hollywood, South LA, Marina Del Rey and Warwick Hollywood.</p><p>The exact address for any event is on its RSVP page; the full list is under <b>The Week</b>.</p>',
     c:["How do I get there?","What happened each night?","Who runs this?"] },
 
   { id:"travel",
@@ -2398,6 +2444,34 @@ window.BLAIR_VOICE_LINES = (function(){
   return out;
 })();
 
+})();
+
+/* =========================================================
+   Pad the last row of the event grid.
+   The grid shows its dividing lines as 1px gaps over a --line
+   background, so a half-filled last row leaves a pale empty
+   cell that reads as a broken tile. Count the columns the
+   browser actually chose and append that many blanks.
+   ========================================================= */
+(function(){
+  var grid = document.querySelector(".days-14");
+  if(!grid) return;
+  var t;
+  function fill(){
+    Array.prototype.slice.call(grid.querySelectorAll(".day-filler"))
+      .forEach(function(n){ n.parentNode.removeChild(n); });
+    var cols = getComputedStyle(grid).gridTemplateColumns.split(/\s+/).filter(Boolean).length;
+    if(!(cols > 1)) return;
+    var need = (cols - (grid.children.length % cols)) % cols;
+    for(var i = 0; i < need; i++){
+      var d = document.createElement("div");
+      d.className = "day day-filler";
+      d.setAttribute("aria-hidden", "true");
+      grid.appendChild(d);
+    }
+  }
+  fill();
+  window.addEventListener("resize", function(){ clearTimeout(t); t = setTimeout(fill, 150); });
 })();
 </script>
 </body>
